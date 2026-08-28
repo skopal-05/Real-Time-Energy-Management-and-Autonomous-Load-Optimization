@@ -1,0 +1,226 @@
+{
+    "generated_at": "2026-08-21T14:46:25.257553+00:00",
+    "forecasting_models": {
+        "production_forecast": {
+            "model": "production_forecast",
+            "target": "production",
+            "prediction": 74.07,
+            "evaluation_status": "forecast_available_actuals_not_available",
+            "metrics": {
+                "sample_count": 1.0,
+                "mae": 0.0,
+                "mse": 0.0,
+                "rmse": 0.0,
+                "mape_percent": 0.0,
+                "smape_percent": 0.0,
+                "wape_percent": 0.0,
+                "r2": 1.0,
+                "bias": 0.0,
+                "max_error": 0.0
+            }
+        },
+        "boiler_forecast": {
+            "model": "boiler_forecast",
+            "target": "boiler",
+            "prediction": 144.21,
+            "evaluation_status": "forecast_available_actuals_not_available",
+            "metrics": {
+                "sample_count": 1.0,
+                "mae": 0.0,
+                "mse": 0.0,
+                "rmse": 0.0,
+                "mape_percent": 0.0,
+                "smape_percent": 0.0,
+                "wape_percent": 0.0,
+                "r2": 1.0,
+                "bias": 0.0,
+                "max_error": 0.0
+            }
+        },
+        "compressor_forecast": {
+            "model": "compressor_forecast",
+            "target": "compressor",
+            "prediction": 60.84,
+            "evaluation_status": "forecast_available_actuals_not_available",
+            "metrics": {
+                "sample_count": 1.0,
+                "mae": 0.0,
+                "mse": 0.0,
+                "rmse": 0.0,
+                "mape_percent": 0.0,
+                "smape_percent": 0.0,
+                "wape_percent": 0.0,
+                "r2": 1.0,
+                "bias": 0.0,
+                "max_error": 0.0
+            }
+        },
+        "hvac_forecast": {
+            "model": "hvac_forecast",
+            "target": "hvac",
+            "prediction": 7.86,
+            "evaluation_status": "forecast_available_actuals_not_available",
+            "metrics": {
+                "sample_count": 1.0,
+                "mae": 0.0,
+                "mse": 0.0,
+                "rmse": 0.0,
+                "mape_percent": 0.0,
+                "smape_percent": 0.0,
+                "wape_percent": 0.0,
+                "r2": 1.0,
+                "bias": 0.0,
+                "max_error": 0.0
+            }
+        },
+        "battery_forecast": {
+            "model": "battery_forecast",
+            "target": "battery",
+            "prediction": 24.93,
+            "evaluation_status": "forecast_available_actuals_not_available",
+            "metrics": {
+                "sample_count": 1.0,
+                "mae": 0.0,
+                "mse": 0.0,
+                "rmse": 0.0,
+                "mape_percent": 0.0,
+                "smape_percent": 0.0,
+                "wape_percent": 0.0,
+                "r2": 1.0,
+                "bias": 0.0,
+                "max_error": 0.0
+            }
+        },
+        "grid_forecast": {
+            "model": "grid_forecast",
+            "target": "grid",
+            "prediction": 387.73,
+            "evaluation_status": "forecast_available_actuals_not_available",
+            "metrics": {
+                "sample_count": 1.0,
+                "mae": 0.0,
+                "mse": 0.0,
+                "rmse": 0.0,
+                "mape_percent": 0.0,
+                "smape_percent": 0.0,
+                "wape_percent": 0.0,
+                "r2": 1.0,
+                "bias": 0.0,
+                "max_error": 0.0
+            }
+        },
+        "solar_forecast": {
+            "model": "solar_forecast",
+            "target": "solar",
+            "prediction": 260.88,
+            "evaluation_status": "forecast_available_actuals_not_available",
+            "metrics": {
+                "sample_count": 1.0,
+                "mae": 0.0,
+                "mse": 0.0,
+                "rmse": 0.0,
+                "mape_percent": 0.0,
+                "smape_percent": 0.0,
+                "wape_percent": 0.0,
+                "r2": 1.0,
+                "bias": 0.0,
+                "max_error": 0.0
+            }
+        }
+    },
+    "forecasting_summary": {
+        "model_count": 7,
+        "evaluation_status": "forecast_outputs_available"
+    },
+    "decision_pipeline": {
+        "recommendation_count": 14,
+        "high_or_critical_priority_count": 2,
+        "setpoint_coverage_percent": 100.0,
+        "constraint_coverage_percent": 0.0,
+        "scenario_count": 5,
+        "best_scenario_id": "cost_saver",
+        "best_scenario_score": 100.0,
+        "optimization_feasible": true
+    },
+    "scenario_evaluation": {
+        "scenario_count": 5,
+        "best_scenario_id": "cost_saver",
+        "best_scenario_score": 100.0,
+        "best_score": 100.0,
+        "score_spread": 100.0,
+        "all_scenarios_ranked": true
+    },
+    "optimization_benchmark": {
+        "metric_count": 7,
+        "summary": {
+            "improved": 3,
+            "regressed": 0,
+            "unchanged": 4
+        },
+        "comparisons": [
+            {
+                "metric": "carbon.total_emissions_kg_co2e",
+                "baseline": 245.16,
+                "candidate": 245.16,
+                "absolute_change": 0.0,
+                "relative_change_percent": 0.0,
+                "direction": "lower_is_better",
+                "status": "unchanged"
+            },
+            {
+                "metric": "cost.net_operating_cost_inr",
+                "baseline": 5573.4,
+                "candidate": 5532.754603,
+                "absolute_change": -40.645397,
+                "relative_change_percent": -0.7293,
+                "direction": "lower_is_better",
+                "status": "improved"
+            },
+            {
+                "metric": "energy.curtailed_energy_kwh",
+                "baseline": 0.0,
+                "candidate": 0.0,
+                "absolute_change": 0.0,
+                "relative_change_percent": 0.0,
+                "direction": "lower_is_better",
+                "status": "unchanged"
+            },
+            {
+                "metric": "energy.energy_objective_kwh",
+                "baseline": 1421.489,
+                "candidate": 1421.489265,
+                "absolute_change": 0.000265,
+                "relative_change_percent": 0.0,
+                "direction": "lower_is_better",
+                "status": "unchanged"
+            },
+            {
+                "metric": "energy.grid_export_kwh",
+                "baseline": 92.61,
+                "candidate": 100.0,
+                "absolute_change": 7.39,
+                "relative_change_percent": 7.9797,
+                "direction": "higher_is_better",
+                "status": "improved"
+            },
+            {
+                "metric": "energy.grid_import_kwh",
+                "baseline": 0.0,
+                "candidate": 0.0,
+                "absolute_change": 0.0,
+                "relative_change_percent": 0.0,
+                "direction": "lower_is_better",
+                "status": "unchanged"
+            },
+            {
+                "metric": "energy.site_consumption_kwh",
+                "baseline": 168.27,
+                "candidate": 160.88,
+                "absolute_change": -7.39,
+                "relative_change_percent": -4.3918,
+                "direction": "lower_is_better",
+                "status": "improved"
+            }
+        ]
+    }
+}

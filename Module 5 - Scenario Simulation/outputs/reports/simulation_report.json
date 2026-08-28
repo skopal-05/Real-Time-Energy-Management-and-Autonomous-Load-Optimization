@@ -1,0 +1,25 @@
+{
+    "generated_at": "2026-08-18T13:49:14.542232+00:00",
+    "module": "Module 5 - Generative Scenario Simulation",
+    "horizon_hours": 1.0,
+    "input_summary": {
+        "forecast_path": "E:\\Final year Project\\DigitalTwin-AI\\Module 3 - Forecasting\\outputs\\forecast_output.json",
+        "recommendations_path": "E:\\Final year Project\\DigitalTwin-AI\\Module 4 - Multi-Agent Intelligence\\outputs\\recommendations\\recommendations.json",
+        "recommendation_count": 14
+    },
+    "ranking_weights": {
+        "energy": 0.35,
+        "cost": 0.35,
+        "carbon": 0.3
+    },
+    "scenario_count": 5,
+    "best_scenario_id": "cost_saver",
+    "best_scenario_name": "Cost Saver",
+    "best_score": 100.0,
+    "baseline_comparison": {
+        "energy_saving_kwh": 18.066,
+        "cost_saving_inr": 978.24,
+        "emissions_avoided_kg_co2e": 43.26
+    },
+    "status": "completed"
+}

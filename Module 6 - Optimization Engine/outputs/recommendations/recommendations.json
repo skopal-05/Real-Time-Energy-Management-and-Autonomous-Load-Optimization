@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-08-20T13:08:58.506224+00:00",
+  "recommendation_count": 1,
+  "recommendations": [
+    {
+      "recommendation_id": "optimize_battery_charge_kw",
+      "equipment": "battery",
+      "action": "decrease_battery_charge_kw",
+      "priority": "medium",
+      "reason": "Adjust battery charging to improve renewable utilization and operating cost.",
+      "current_value": 40.0,
+      "recommended_value": 32.61,
+      "change_percent": 18.48,
+      "unit": "kW",
+      "expected_impact": {
+        "energy_saving_kwh": 0.0,
+        "cost_saving_inr": 40.645,
+        "emissions_avoided_kg_co2e": 0.0
+      },
+      "constraints_respected": true
+    }
+  ]
+}

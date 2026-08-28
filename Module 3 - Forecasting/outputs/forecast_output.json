@@ -1,0 +1,17 @@
+{
+    "future_state": {
+        "units_per_hour": 74.07,
+        "fuel_flow_m3_hr": 144.21,
+        "compressor_power_kw": 60.84,
+        "hvac_power_kw": 7.86,
+        "battery_power_kw": 24.93,
+        "grid_import_kw": 387.73,
+        "inverter_power_kw": 260.88
+    },
+    "energy_forecast": {
+        "total_load_kw": 68.7,
+        "renewable_generation_kw": 285.81,
+        "grid_import_kw": 387.73,
+        "boiler_fuel_flow_m3_hr": 144.21
+    }
+}

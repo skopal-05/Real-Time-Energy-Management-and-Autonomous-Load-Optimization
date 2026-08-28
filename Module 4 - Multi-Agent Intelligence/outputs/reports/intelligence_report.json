@@ -1,0 +1,306 @@
+{
+    "generated_at": "2026-08-16T00:00:11.212111",
+    "summary": {
+        "total_recommendations": 14,
+        "priority_counts": {
+            "critical": 0,
+            "high": 2,
+            "medium": 4,
+            "low": 8
+        },
+        "highest_priority": "high",
+        "highest_priority_agent": "boiler_agent",
+        "highest_priority_action": "optimize_boiler_fuel"
+    },
+    "recommendations": [
+        {
+            "agent": "boiler_agent",
+            "action": "optimize_boiler_fuel",
+            "priority": "high",
+            "reason": "Forecast boiler fuel demand is high and controlled fuel reduction is possible while maintaining efficiency.",
+            "setpoints": {
+                "boiler_fuel_target_m3_hr": 122.58,
+                "boiler_fuel_reduction_m3_hr": 21.63,
+                "required_efficiency_percent": 70.0
+            },
+            "expected_impact": {
+                "forecast_fuel_flow_m3_hr": 144.21,
+                "optimized_fuel_flow_m3_hr": 122.58,
+                "estimated_fuel_saving_m3_hr": 21.63
+            },
+            "constraints": [
+                "minimum_efficiency_percent=70.0",
+                "maximum_reduction_fraction=0.15",
+                "fuel flow cannot exceed maximum_fuel_flow_m3_hr"
+            ]
+        },
+        {
+            "agent": "rule_engine",
+            "action": "optimize_grid_usage",
+            "priority": "high",
+            "reason": "High grid tariff requires energy-cost optimization.",
+            "setpoints": {
+                "tariff_inr_kwh": 8.0
+            },
+            "expected_impact": {},
+            "constraints": [
+                "rule=high_grid_tariff",
+                "condition=tariff_inr_kwh >= 8"
+            ]
+        },
+        {
+            "agent": "solar_dispatch_agent",
+            "action": "dispatch_and_curtail",
+            "priority": "medium",
+            "reason": "Solar is allocated to local demand, storage, and export in that order.",
+            "setpoints": {
+                "solar_to_load_kw": 68.7,
+                "solar_to_battery_kw": 40.0,
+                "solar_to_grid_kw": 100.0,
+                "solar_curtailed_kw": 52.18
+            },
+            "expected_impact": {
+                "solar_utilized_kw": 208.7,
+                "self_consumption_percent": 41.67
+            },
+            "constraints": [
+                "battery charge headroom and charge-power limit",
+                "grid export limit"
+            ]
+        },
+        {
+            "agent": "battery_management_agent",
+            "action": "charge_from_renewable",
+            "priority": "medium",
+            "reason": "Renewable surplus is available and the battery has SOC headroom.",
+            "setpoints": {
+                "battery_charge_kw": 40.0,
+                "battery_discharge_kw": 0.0,
+                "battery_power_kw": -40.0,
+                "projected_soc_percent": 90.0
+            },
+            "expected_impact": {
+                "grid_import_reduction_kw": 0.0,
+                "renewable_absorption_kw": 40.0
+            },
+            "constraints": [
+                "minimum_soc_percent=20.0",
+                "maximum_soc_percent=90.0",
+                "battery power and interval energy limits"
+            ]
+        },
+        {
+            "agent": "compressor_agent",
+            "action": "optimize_compressor_load",
+            "priority": "medium",
+            "reason": "Compressor forecast demand is high and power reduction is possible while maintaining the required pressure.",
+            "setpoints": {
+                "compressor_power_target_kw": 51.71,
+                "compressor_load_reduction_kw": 9.13,
+                "target_pressure_bar": 6.0
+            },
+            "expected_impact": {
+                "forecast_compressor_power_kw": 60.84,
+                "optimized_compressor_power_kw": 51.71,
+                "estimated_power_saving_kw": 9.13
+            },
+            "constraints": [
+                "minimum_pressure_bar=5.0",
+                "maximum_reduction_fraction=0.15",
+                "compressor power cannot exceed maximum_compressor_power_kw"
+            ]
+        },
+        {
+            "agent": "rule_engine",
+            "action": "use_renewable_surplus",
+            "priority": "medium",
+            "reason": "Renewable surplus should be utilized before curtailment.",
+            "setpoints": {
+                "renewable_surplus_kw": 217.11
+            },
+            "expected_impact": {},
+            "constraints": [
+                "rule=renewable_surplus",
+                "condition=renewable_surplus_kw > 0"
+            ]
+        },
+        {
+            "agent": "cost_optimization_agent",
+            "action": "maintain_schedule",
+            "priority": "low",
+            "reason": "Load shifting would not reduce the forecast energy cost.",
+            "setpoints": {
+                "production_load_target_kw": 68.7,
+                "load_to_shift_kw": 0.0
+            },
+            "expected_impact": {
+                "baseline_cost_inr": 0.0,
+                "optimized_cost_inr": 0.0,
+                "estimated_savings_inr": 0.0
+            },
+            "constraints": [
+                "maximum_shift_fraction=0.2",
+                "renewable generation is consumed before grid energy"
+            ]
+        },
+        {
+            "agent": "load_balancing_agent",
+            "action": "serve_requested_load",
+            "priority": "low",
+            "reason": "Available power can serve all production requests.",
+            "setpoints": {
+                "line_power_targets_kw": {
+                    "production_line_A": 34.35,
+                    "production_line_B": 34.35
+                },
+                "total_power_target_kw": 68.7
+            },
+            "expected_impact": {
+                "requested_power_kw": 68.7,
+                "allocated_power_kw": 68.7,
+                "curtailed_power_kw": 0.0
+            },
+            "constraints": [
+                "line minimum and maximum power limits",
+                "priority-weighted fairness during shortages"
+            ]
+        },
+        {
+            "agent": "production_scheduler",
+            "action": "schedule_production",
+            "priority": "low",
+            "reason": "All jobs were assigned to the lowest-cost feasible slots.",
+            "setpoints": {
+                "assignments": [
+                    {
+                        "job_id": "forecast_production_job",
+                        "slot_id": "current_forecast_slot",
+                        "energy_kwh": 68.7,
+                        "renewable_kwh": 68.7,
+                        "grid_kwh": 0.0,
+                        "estimated_cost_inr": 0.0
+                    }
+                ],
+                "unscheduled_jobs": []
+            },
+            "expected_impact": {
+                "scheduled_jobs": 1.0,
+                "unscheduled_jobs": 0.0,
+                "renewable_energy_used_kwh": 68.7,
+                "estimated_energy_cost_inr": 0.0
+            },
+            "constraints": [
+                "jobs are indivisible",
+                "jobs must complete no later than deadline_slot",
+                "slot energy capacity cannot be exceeded"
+            ]
+        },
+        {
+            "agent": "energy_allocator",
+            "action": "allocate_energy",
+            "priority": "low",
+            "reason": "Production demand is covered using the least-cost available sources.",
+            "setpoints": {
+                "renewable_to_production_kw": 68.7,
+                "battery_to_production_kw": 0.0,
+                "grid_to_production_kw": 0.0,
+                "renewable_surplus_kw": 217.11,
+                "unserved_production_kw": 0.0
+            },
+            "expected_impact": {
+                "served_production_kw": 68.7,
+                "renewable_share_percent": 100.0,
+                "estimated_cost_inr_per_hour": 0.0
+            },
+            "constraints": [
+                "renewable energy has first dispatch priority",
+                "battery and grid power limits",
+                "battery is dispatched economically unless needed to avoid a shortfall"
+            ]
+        },
+        {
+            "agent": "renewable_agent",
+            "action": "maximize_renewable_supply",
+            "priority": "low",
+            "reason": "Renewable sources are dispatched before grid import while preserving reserve.",
+            "setpoints": {
+                "solar_to_load_kw": 68.7,
+                "battery_to_load_kw": 0.0,
+                "grid_to_load_kw": 0.0,
+                "solar_surplus_kw": 192.18
+            },
+            "expected_impact": {
+                "renewable_energy_served_kw": 68.7,
+                "renewable_penetration_percent": 100.0,
+                "avoided_grid_import_kw": 68.7
+            },
+            "constraints": [
+                "battery reserve is preserved",
+                "renewable-first dispatch"
+            ]
+        },
+        {
+            "agent": "grid_interaction_agent",
+            "action": "export_surplus",
+            "priority": "low",
+            "reason": "Local supply exceeds demand and export capacity is available.",
+            "setpoints": {
+                "grid_import_kw": 0.0,
+                "grid_export_kw": 100.0,
+                "unserved_load_kw": 0.0,
+                "curtailed_export_kw": 142.04
+            },
+            "expected_impact": {
+                "import_cost_inr_per_hour": 0.0,
+                "export_revenue_inr_per_hour": 400.0,
+                "net_grid_cost_inr_per_hour": -400.0
+            },
+            "constraints": [
+                "grid import limit",
+                "grid export limit"
+            ]
+        },
+        {
+            "agent": "hvac_agent",
+            "action": "maintain_hvac",
+            "priority": "low",
+            "reason": "Forecast HVAC demand is within the configured operating range.",
+            "setpoints": {
+                "hvac_power_target_kw": 7.86,
+                "hvac_load_reduction_kw": 0.0,
+                "target_temperature_c": 24.0
+            },
+            "expected_impact": {
+                "forecast_hvac_power_kw": 7.86,
+                "optimized_hvac_power_kw": 7.86,
+                "estimated_power_saving_kw": 0.0
+            },
+            "constraints": [
+                "maximum_reduction_fraction=0.15",
+                "temperature_range=20.0..28.0",
+                "HVAC power cannot exceed maximum_hvac_power_kw"
+            ]
+        },
+        {
+            "agent": "equipment_health_agent",
+            "action": "continue_normal_operation",
+            "priority": "low",
+            "reason": "Equipment health indicators are within the normal operating range.",
+            "setpoints": {
+                "health_score": 100.0,
+                "anomaly_score": 0.0
+            },
+            "expected_impact": {
+                "health_score_percent": 100.0,
+                "anomaly_score": 0.0
+            },
+            "constraints": [
+                "warning_health_score=70.0",
+                "critical_health_score=40.0",
+                "warning_anomaly_score=0.5",
+                "critical_anomaly_score=0.8",
+                "equipment=plant_equipment"
+            ]
+        }
+    ]
+}

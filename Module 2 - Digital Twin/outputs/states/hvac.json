@@ -1,0 +1,8 @@
+{
+    "system": "hvac",
+    "timestamp": "2026-07-20T22:40:58.786963",
+    "power": 16.87,
+    "status": "RUNNING",
+    "temperature": 23.14,
+    "health": "NORMAL"
+}

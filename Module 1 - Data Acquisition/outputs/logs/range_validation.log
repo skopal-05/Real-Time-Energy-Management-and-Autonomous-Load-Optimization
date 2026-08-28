@@ -1,0 +1,109 @@
+======================================================================
+RANGE VALIDATION REPORT
+======================================================================
+
+----------------------------------------------------------------------
+Dataset : compressor.csv
+----------------------------------------------------------------------
+[PASS] air_flow_m3_min
+[FAIL] Column 'discharge_pressure_bar' not found
+[FAIL] Column 'power_consumption_kw' not found
+[PASS] motor_temperature_c
+[PASS] vibration_mm_s
+
+STATUS : FAILED
+
+----------------------------------------------------------------------
+Dataset : hvac.csv
+----------------------------------------------------------------------
+[PASS] power_kw
+[PASS] temperature_c
+[PASS] airflow_m3_min
+[PASS] humidity_percent
+[PASS] setpoint_temperature_c
+[PASS] efficiency_percent
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : battery_storage.csv
+----------------------------------------------------------------------
+[PASS] state_of_charge_percent
+[PASS] battery_power_kw
+[PASS] voltage_v
+[PASS] current_a
+[PASS] temperature_c
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : boiler.csv
+----------------------------------------------------------------------
+[PASS] steam_pressure_bar
+[PASS] steam_flow_kg_hr
+[PASS] fuel_flow_m3_hr
+[PASS] feedwater_temperature_c
+[PASS] flue_gas_temperature_c
+[PASS] efficiency_percent
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : grid.csv
+----------------------------------------------------------------------
+[PASS] grid_import_kw
+[PASS] grid_export_kw
+[PASS] frequency_hz
+[PASS] voltage_v
+[PASS] power_factor
+[PASS] tariff_inr_kwh
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : production_line_a_production.csv
+----------------------------------------------------------------------
+[PASS] units_per_hour
+[PASS] machine_load_kw
+[PASS] motor_temperature_c
+[PASS] vibration_mm_s
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : production_line_b_production.csv
+----------------------------------------------------------------------
+[PASS] units_per_hour
+[PASS] machine_load_kw
+[PASS] motor_temperature_c
+[PASS] vibration_mm_s
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : solar_plant.csv
+----------------------------------------------------------------------
+[PASS] irradiance_w_m2
+[PASS] dc_power_kw
+[PASS] inverter_power_kw
+[PASS] panel_temperature_c
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : weather.csv
+----------------------------------------------------------------------
+[PASS] ambient_temperature_c
+[PASS] humidity_percent
+[PASS] wind_speed_m_s
+[PASS] cloud_cover_percent
+[PASS] global_irradiance_w_m2
+
+STATUS : PASSED
+
+======================================================================
+SUMMARY
+======================================================================
+Total Datasets : 9
+Passed         : 8
+Failed         : 1

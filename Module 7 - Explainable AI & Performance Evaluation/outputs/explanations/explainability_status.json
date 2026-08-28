@@ -1,0 +1,6 @@
+{
+    "status": "not_executed",
+    "reason": "Trained model feature matrix and SHAP background samples are not supplied by the current integration artifact.",
+    "method": "exact_single_reference_shapley",
+    "executed": false
+}

@@ -1,0 +1,6 @@
+{
+    "status": "not_evaluated",
+    "reason": "Reference and current model evaluation metrics are not available in the current Module 3 forecast artifact.",
+    "retraining_required": false,
+    "evaluated": false
+}

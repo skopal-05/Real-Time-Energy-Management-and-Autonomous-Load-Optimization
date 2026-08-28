@@ -1,0 +1,215 @@
+======================================================================
+SCHEMA VALIDATION REPORT
+======================================================================
+
+----------------------------------------------------------------------
+Dataset : compressor.csv
+----------------------------------------------------------------------
+[PASS] Required columns present
+[PASS] No duplicate columns
+[PASS] Timestamp format valid
+
+Rows    : 96
+Columns : 9
+
+Column Data Types
+------------------------------
+timestamp                          str
+system_id                          str
+air_flow_m3_min                    float64
+air_pressure_bar                   float64
+power_kw                           float64
+motor_temperature_c                float64
+vibration_mm_s                     float64
+efficiency_percent                 float64
+status                             str
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : hvac.csv
+----------------------------------------------------------------------
+[PASS] Required columns present
+[PASS] No duplicate columns
+[PASS] Timestamp format valid
+
+Rows    : 96
+Columns : 9
+
+Column Data Types
+------------------------------
+timestamp                          str
+system_id                          str
+power_kw                           float64
+temperature_c                      float64
+airflow_m3_min                     float64
+humidity_percent                   float64
+setpoint_temperature_c             int64
+efficiency_percent                 float64
+status                             str
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : battery_storage.csv
+----------------------------------------------------------------------
+[PASS] Required columns present
+[PASS] No duplicate columns
+[PASS] Timestamp format valid
+
+Rows    : 96
+Columns : 8
+
+Column Data Types
+------------------------------
+timestamp                          str
+system_id                          str
+state_of_charge_percent            float64
+battery_power_kw                   float64
+voltage_v                          float64
+current_a                          float64
+temperature_c                      float64
+mode                               str
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : boiler.csv
+----------------------------------------------------------------------
+[PASS] Required columns present
+[PASS] No duplicate columns
+[PASS] Timestamp format valid
+
+Rows    : 96
+Columns : 8
+
+Column Data Types
+------------------------------
+timestamp                          str
+system_id                          str
+steam_pressure_bar                 float64
+steam_flow_kg_hr                   float64
+fuel_flow_m3_hr                    float64
+feedwater_temperature_c            float64
+flue_gas_temperature_c             float64
+efficiency_percent                 float64
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : grid.csv
+----------------------------------------------------------------------
+[PASS] Required columns present
+[PASS] No duplicate columns
+[PASS] Timestamp format valid
+
+Rows    : 96
+Columns : 8
+
+Column Data Types
+------------------------------
+timestamp                          str
+system_id                          str
+grid_import_kw                     float64
+grid_export_kw                     float64
+frequency_hz                       float64
+voltage_v                          float64
+power_factor                       float64
+tariff_inr_kwh                     float64
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : production_line_a_production.csv
+----------------------------------------------------------------------
+[PASS] Required columns present
+[PASS] No duplicate columns
+[PASS] Timestamp format valid
+
+Rows    : 96
+Columns : 7
+
+Column Data Types
+------------------------------
+timestamp                          str
+system_id                          str
+units_per_hour                     float64
+machine_load_kw                    float64
+motor_temperature_c                float64
+vibration_mm_s                     float64
+status                             str
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : production_line_b_production.csv
+----------------------------------------------------------------------
+[PASS] Required columns present
+[PASS] No duplicate columns
+[PASS] Timestamp format valid
+
+Rows    : 96
+Columns : 7
+
+Column Data Types
+------------------------------
+timestamp                          str
+system_id                          str
+units_per_hour                     float64
+machine_load_kw                    float64
+motor_temperature_c                float64
+vibration_mm_s                     float64
+status                             str
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : solar_plant.csv
+----------------------------------------------------------------------
+[PASS] Required columns present
+[PASS] No duplicate columns
+[PASS] Timestamp format valid
+
+Rows    : 96
+Columns : 7
+
+Column Data Types
+------------------------------
+timestamp                          str
+system_id                          str
+irradiance_w_m2                    float64
+dc_power_kw                        float64
+inverter_power_kw                  float64
+panel_temperature_c                float64
+inverter_status                    str
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : weather.csv
+----------------------------------------------------------------------
+[PASS] Required columns present
+[PASS] No duplicate columns
+[PASS] Timestamp format valid
+
+Rows    : 96
+Columns : 7
+
+Column Data Types
+------------------------------
+timestamp                          str
+system_id                          str
+ambient_temperature_c              float64
+humidity_percent                   float64
+wind_speed_m_s                     float64
+cloud_cover_percent                float64
+global_irradiance_w_m2             float64
+
+STATUS : PASSED
+
+======================================================================
+SUMMARY
+======================================================================
+Total Datasets : 9
+Passed         : 9
+Failed         : 0

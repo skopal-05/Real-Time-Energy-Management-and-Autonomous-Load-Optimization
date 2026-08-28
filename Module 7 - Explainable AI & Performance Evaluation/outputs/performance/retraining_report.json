@@ -1,0 +1,28 @@
+{
+    "generated_at": "2026-08-21T14:43:54.572122+00:00",
+    "status": "evaluated",
+    "model_count": 1,
+    "models": [
+        {
+            "model": "module3_forecast_pipeline",
+            "triggered": false,
+            "status": "not_required",
+            "promoted": false,
+            "current_metrics": {
+                "sample_count": 1.0,
+                "mae": 0.0,
+                "mse": 0.0,
+                "rmse": 0.0,
+                "mape_percent": 0.0,
+                "smape_percent": 0.0,
+                "wape_percent": 0.0,
+                "r2": 1.0,
+                "bias": 0.0,
+                "max_error": 0.0
+            },
+            "candidate_metrics": null,
+            "rmse_improvement_percent": 0.0,
+            "promotion_path": null
+        }
+    ]
+}

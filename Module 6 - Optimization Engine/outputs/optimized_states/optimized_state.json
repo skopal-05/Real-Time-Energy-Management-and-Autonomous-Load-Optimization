@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-08-20T13:08:58.506224+00:00",
+  "status": "feasible",
+  "optimized_state": {
+    "production_load_kw": 68.7,
+    "compressor_power_kw": 51.71,
+    "hvac_power_kw": 7.86,
+    "battery_charge_kw": 32.61,
+    "battery_discharge_kw": 0.0,
+    "grid_export_limit_kw": 100.0,
+    "boiler_fuel_m3_hr": 122.58,
+    "renewable_generation_kw": 260.88,
+    "projected_soc_percent": 80.979
+  },
+  "objective": {
+    "total": 0.9974476,
+    "energy_component": 1.00000019,
+    "cost_component": 0.99270725,
+    "carbon_component": 1.0
+  },
+  "algorithm": {
+    "name": "real_valued_genetic_algorithm",
+    "generations": 80,
+    "population_size": 60,
+    "evaluations": 4800,
+    "seed": 42,
+    "best_fitness": 0.9974476
+  },
+  "violations": []
+}

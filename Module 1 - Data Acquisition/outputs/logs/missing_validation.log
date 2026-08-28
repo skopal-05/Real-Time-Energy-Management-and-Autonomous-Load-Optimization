@@ -1,0 +1,206 @@
+======================================================================
+MISSING VALUES VALIDATION REPORT
+======================================================================
+
+----------------------------------------------------------------------
+Dataset : compressor.csv
+----------------------------------------------------------------------
+Rows             : 96
+Columns          : 9
+Total Cells      : 864
+Missing Values   : 0
+Duplicate Rows   : 0
+
+Missing Values by Column
+-----------------------------------
+timestamp                               0 (0.00%)
+system_id                               0 (0.00%)
+air_flow_m3_min                         0 (0.00%)
+air_pressure_bar                        0 (0.00%)
+power_kw                                0 (0.00%)
+motor_temperature_c                     0 (0.00%)
+vibration_mm_s                          0 (0.00%)
+efficiency_percent                      0 (0.00%)
+status                                  0 (0.00%)
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : hvac.csv
+----------------------------------------------------------------------
+Rows             : 96
+Columns          : 9
+Total Cells      : 864
+Missing Values   : 0
+Duplicate Rows   : 0
+
+Missing Values by Column
+-----------------------------------
+timestamp                               0 (0.00%)
+system_id                               0 (0.00%)
+power_kw                                0 (0.00%)
+temperature_c                           0 (0.00%)
+airflow_m3_min                          0 (0.00%)
+humidity_percent                        0 (0.00%)
+setpoint_temperature_c                  0 (0.00%)
+efficiency_percent                      0 (0.00%)
+status                                  0 (0.00%)
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : battery_storage.csv
+----------------------------------------------------------------------
+Rows             : 96
+Columns          : 8
+Total Cells      : 768
+Missing Values   : 0
+Duplicate Rows   : 0
+
+Missing Values by Column
+-----------------------------------
+timestamp                               0 (0.00%)
+system_id                               0 (0.00%)
+state_of_charge_percent                 0 (0.00%)
+battery_power_kw                        0 (0.00%)
+voltage_v                               0 (0.00%)
+current_a                               0 (0.00%)
+temperature_c                           0 (0.00%)
+mode                                    0 (0.00%)
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : boiler.csv
+----------------------------------------------------------------------
+Rows             : 96
+Columns          : 8
+Total Cells      : 768
+Missing Values   : 0
+Duplicate Rows   : 0
+
+Missing Values by Column
+-----------------------------------
+timestamp                               0 (0.00%)
+system_id                               0 (0.00%)
+steam_pressure_bar                      0 (0.00%)
+steam_flow_kg_hr                        0 (0.00%)
+fuel_flow_m3_hr                         0 (0.00%)
+feedwater_temperature_c                 0 (0.00%)
+flue_gas_temperature_c                  0 (0.00%)
+efficiency_percent                      0 (0.00%)
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : grid.csv
+----------------------------------------------------------------------
+Rows             : 96
+Columns          : 8
+Total Cells      : 768
+Missing Values   : 0
+Duplicate Rows   : 0
+
+Missing Values by Column
+-----------------------------------
+timestamp                               0 (0.00%)
+system_id                               0 (0.00%)
+grid_import_kw                          0 (0.00%)
+grid_export_kw                          0 (0.00%)
+frequency_hz                            0 (0.00%)
+voltage_v                               0 (0.00%)
+power_factor                            0 (0.00%)
+tariff_inr_kwh                          0 (0.00%)
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : production_line_a_production.csv
+----------------------------------------------------------------------
+Rows             : 96
+Columns          : 7
+Total Cells      : 672
+Missing Values   : 0
+Duplicate Rows   : 0
+
+Missing Values by Column
+-----------------------------------
+timestamp                               0 (0.00%)
+system_id                               0 (0.00%)
+units_per_hour                          0 (0.00%)
+machine_load_kw                         0 (0.00%)
+motor_temperature_c                     0 (0.00%)
+vibration_mm_s                          0 (0.00%)
+status                                  0 (0.00%)
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : production_line_b_production.csv
+----------------------------------------------------------------------
+Rows             : 96
+Columns          : 7
+Total Cells      : 672
+Missing Values   : 0
+Duplicate Rows   : 0
+
+Missing Values by Column
+-----------------------------------
+timestamp                               0 (0.00%)
+system_id                               0 (0.00%)
+units_per_hour                          0 (0.00%)
+machine_load_kw                         0 (0.00%)
+motor_temperature_c                     0 (0.00%)
+vibration_mm_s                          0 (0.00%)
+status                                  0 (0.00%)
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : solar_plant.csv
+----------------------------------------------------------------------
+Rows             : 96
+Columns          : 7
+Total Cells      : 672
+Missing Values   : 0
+Duplicate Rows   : 0
+
+Missing Values by Column
+-----------------------------------
+timestamp                               0 (0.00%)
+system_id                               0 (0.00%)
+irradiance_w_m2                         0 (0.00%)
+dc_power_kw                             0 (0.00%)
+inverter_power_kw                       0 (0.00%)
+panel_temperature_c                     0 (0.00%)
+inverter_status                         0 (0.00%)
+
+STATUS : PASSED
+
+----------------------------------------------------------------------
+Dataset : weather.csv
+----------------------------------------------------------------------
+Rows             : 96
+Columns          : 7
+Total Cells      : 672
+Missing Values   : 0
+Duplicate Rows   : 0
+
+Missing Values by Column
+-----------------------------------
+timestamp                               0 (0.00%)
+system_id                               0 (0.00%)
+ambient_temperature_c                   0 (0.00%)
+humidity_percent                        0 (0.00%)
+wind_speed_m_s                          0 (0.00%)
+cloud_cover_percent                     0 (0.00%)
+global_irradiance_w_m2                  0 (0.00%)
+
+STATUS : PASSED
+
+======================================================================
+SUMMARY
+======================================================================
+Total Datasets : 9
+Passed         : 9
+Attention      : 0

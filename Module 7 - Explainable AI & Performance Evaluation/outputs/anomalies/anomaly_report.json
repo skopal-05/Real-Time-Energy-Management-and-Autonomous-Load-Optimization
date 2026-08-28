@@ -1,0 +1,589 @@
+{
+  "generated_at": "2026-08-21T03:25:23.478954+00:00",
+  "method": "isolation_forest",
+  "feature_names": [
+    "machine_load_kw",
+    "motor_temperature_c",
+    "vibration_mm_s"
+  ],
+  "record_count": 48,
+  "anomaly_count": 5,
+  "records": [
+    {
+      "row_index": 0,
+      "raw_score": 0.05517942,
+      "anomaly_score": 0.94552869,
+      "label": "anomaly",
+      "is_anomaly": true,
+      "values": {
+        "machine_load_kw": 111.86,
+        "motor_temperature_c": 51.03,
+        "vibration_mm_s": 3.13
+      }
+    },
+    {
+      "row_index": 1,
+      "raw_score": -0.02999061,
+      "anomaly_score": 0.54100078,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 103.29,
+        "motor_temperature_c": 52.11,
+        "vibration_mm_s": 2.491
+      }
+    },
+    {
+      "row_index": 2,
+      "raw_score": -0.05806032,
+      "anomaly_score": 0.40767943,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 106.79,
+        "motor_temperature_c": 50.38,
+        "vibration_mm_s": 1.995
+      }
+    },
+    {
+      "row_index": 3,
+      "raw_score": 0.05729007,
+      "anomaly_score": 0.95555353,
+      "label": "anomaly",
+      "is_anomaly": true,
+      "values": {
+        "machine_load_kw": 116.55,
+        "motor_temperature_c": 53.36,
+        "vibration_mm_s": 1.528
+      }
+    },
+    {
+      "row_index": 4,
+      "raw_score": -0.03429505,
+      "anomaly_score": 0.5205562,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 102.97,
+        "motor_temperature_c": 52.24,
+        "vibration_mm_s": 1.478
+      }
+    },
+    {
+      "row_index": 5,
+      "raw_score": 0.05703664,
+      "anomaly_score": 0.95434981,
+      "label": "anomaly",
+      "is_anomaly": true,
+      "values": {
+        "machine_load_kw": 115.7,
+        "motor_temperature_c": 52.68,
+        "vibration_mm_s": 2.961
+      }
+    },
+    {
+      "row_index": 6,
+      "raw_score": -0.05825035,
+      "anomaly_score": 0.40677689,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 88.2,
+        "motor_temperature_c": 49.38,
+        "vibration_mm_s": 2.671
+      }
+    },
+    {
+      "row_index": 7,
+      "raw_score": 0.06664791,
+      "anomaly_score": 1.0,
+      "label": "anomaly",
+      "is_anomaly": true,
+      "values": {
+        "machine_load_kw": 114.12,
+        "motor_temperature_c": 53.59,
+        "vibration_mm_s": 2.769
+      }
+    },
+    {
+      "row_index": 8,
+      "raw_score": -0.10402509,
+      "anomaly_score": 0.18936283,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 93.79,
+        "motor_temperature_c": 50.7,
+        "vibration_mm_s": 1.938
+      }
+    },
+    {
+      "row_index": 9,
+      "raw_score": -0.09339931,
+      "anomaly_score": 0.2398316,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 89.92,
+        "motor_temperature_c": 50.28,
+        "vibration_mm_s": 2.244
+      }
+    },
+    {
+      "row_index": 10,
+      "raw_score": -0.07638485,
+      "anomaly_score": 0.32064431,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 80.23,
+        "motor_temperature_c": 49.22,
+        "vibration_mm_s": 2.404
+      }
+    },
+    {
+      "row_index": 11,
+      "raw_score": 0.00118806,
+      "anomaly_score": 0.68908858,
+      "label": "anomaly",
+      "is_anomaly": true,
+      "values": {
+        "machine_load_kw": 110.46,
+        "motor_temperature_c": 51.42,
+        "vibration_mm_s": 0.864
+      }
+    },
+    {
+      "row_index": 12,
+      "raw_score": -0.04797739,
+      "anomaly_score": 0.45556986,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 110.28,
+        "motor_temperature_c": 52.21,
+        "vibration_mm_s": 1.673
+      }
+    },
+    {
+      "row_index": 13,
+      "raw_score": -0.06982402,
+      "anomaly_score": 0.35180599,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 86.38,
+        "motor_temperature_c": 51.05,
+        "vibration_mm_s": 1.932
+      }
+    },
+    {
+      "row_index": 14,
+      "raw_score": -0.05903431,
+      "anomaly_score": 0.40305331,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 96.63,
+        "motor_temperature_c": 51.55,
+        "vibration_mm_s": 2.525
+      }
+    },
+    {
+      "row_index": 15,
+      "raw_score": -0.01210691,
+      "anomaly_score": 0.62594211,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 93.35,
+        "motor_temperature_c": 49.0,
+        "vibration_mm_s": 2.929
+      }
+    },
+    {
+      "row_index": 16,
+      "raw_score": -0.07211113,
+      "anomaly_score": 0.34094299,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 87.05,
+        "motor_temperature_c": 51.07,
+        "vibration_mm_s": 1.886
+      }
+    },
+    {
+      "row_index": 17,
+      "raw_score": -0.09480969,
+      "anomaly_score": 0.23313276,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 96.88,
+        "motor_temperature_c": 51.36,
+        "vibration_mm_s": 1.446
+      }
+    },
+    {
+      "row_index": 18,
+      "raw_score": -0.08805876,
+      "anomaly_score": 0.26519731,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 87.23,
+        "motor_temperature_c": 51.26,
+        "vibration_mm_s": 1.287
+      }
+    },
+    {
+      "row_index": 19,
+      "raw_score": -0.03684774,
+      "anomaly_score": 0.5084318,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 84.27,
+        "motor_temperature_c": 50.92,
+        "vibration_mm_s": 0.791
+      }
+    },
+    {
+      "row_index": 20,
+      "raw_score": -0.11435008,
+      "anomaly_score": 0.14032271,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 93.71,
+        "motor_temperature_c": 49.73,
+        "vibration_mm_s": 1.174
+      }
+    },
+    {
+      "row_index": 21,
+      "raw_score": -0.06527936,
+      "anomaly_score": 0.37339153,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 81.07,
+        "motor_temperature_c": 50.51,
+        "vibration_mm_s": 2.281
+      }
+    },
+    {
+      "row_index": 22,
+      "raw_score": -0.107192,
+      "anomaly_score": 0.17432113,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 87.13,
+        "motor_temperature_c": 48.84,
+        "vibration_mm_s": 2.014
+      }
+    },
+    {
+      "row_index": 23,
+      "raw_score": -0.0974923,
+      "anomaly_score": 0.22039129,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 69.79,
+        "motor_temperature_c": 47.21,
+        "vibration_mm_s": 0.976
+      }
+    },
+    {
+      "row_index": 24,
+      "raw_score": -0.12080174,
+      "anomaly_score": 0.10967961,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 72.7,
+        "motor_temperature_c": 47.84,
+        "vibration_mm_s": 1.646
+      }
+    },
+    {
+      "row_index": 25,
+      "raw_score": -0.09395505,
+      "anomaly_score": 0.23719202,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 78.33,
+        "motor_temperature_c": 50.42,
+        "vibration_mm_s": 1.66
+      }
+    },
+    {
+      "row_index": 26,
+      "raw_score": -0.06402259,
+      "anomaly_score": 0.37936076,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 73.41,
+        "motor_temperature_c": 48.98,
+        "vibration_mm_s": 0.691
+      }
+    },
+    {
+      "row_index": 27,
+      "raw_score": -0.12055503,
+      "anomaly_score": 0.11085138,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 58.89,
+        "motor_temperature_c": 46.22,
+        "vibration_mm_s": 0.944
+      }
+    },
+    {
+      "row_index": 28,
+      "raw_score": -0.10811493,
+      "anomaly_score": 0.1699375,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 74.69,
+        "motor_temperature_c": 50.16,
+        "vibration_mm_s": 1.266
+      }
+    },
+    {
+      "row_index": 29,
+      "raw_score": -0.08994775,
+      "anomaly_score": 0.25622529,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 51.77,
+        "motor_temperature_c": 46.89,
+        "vibration_mm_s": 1.666
+      }
+    },
+    {
+      "row_index": 30,
+      "raw_score": -0.12171766,
+      "anomaly_score": 0.10532931,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 65.46,
+        "motor_temperature_c": 46.61,
+        "vibration_mm_s": 1.337
+      }
+    },
+    {
+      "row_index": 31,
+      "raw_score": -0.10279083,
+      "anomaly_score": 0.19522512,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 63.35,
+        "motor_temperature_c": 48.5,
+        "vibration_mm_s": 1.677
+      }
+    },
+    {
+      "row_index": 32,
+      "raw_score": -0.10499558,
+      "anomaly_score": 0.18475334,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 58.21,
+        "motor_temperature_c": 45.79,
+        "vibration_mm_s": 0.999
+      }
+    },
+    {
+      "row_index": 33,
+      "raw_score": -0.06178432,
+      "anomaly_score": 0.38999175,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 53.25,
+        "motor_temperature_c": 48.16,
+        "vibration_mm_s": 0.539
+      }
+    },
+    {
+      "row_index": 34,
+      "raw_score": -0.13052062,
+      "anomaly_score": 0.06351829,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 56.74,
+        "motor_temperature_c": 46.27,
+        "vibration_mm_s": 1.08
+      }
+    },
+    {
+      "row_index": 35,
+      "raw_score": -0.13646573,
+      "anomaly_score": 0.03528112,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 58.48,
+        "motor_temperature_c": 47.32,
+        "vibration_mm_s": 1.421
+      }
+    },
+    {
+      "row_index": 36,
+      "raw_score": -0.07830052,
+      "anomaly_score": 0.31154557,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 51.52,
+        "motor_temperature_c": 48.13,
+        "vibration_mm_s": 0.638
+      }
+    },
+    {
+      "row_index": 37,
+      "raw_score": -0.13649278,
+      "anomaly_score": 0.03515263,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 47.18,
+        "motor_temperature_c": 45.97,
+        "vibration_mm_s": 1.289
+      }
+    },
+    {
+      "row_index": 38,
+      "raw_score": -0.14389388,
+      "anomaly_score": 0.0,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 50.0,
+        "motor_temperature_c": 46.58,
+        "vibration_mm_s": 1.362
+      }
+    },
+    {
+      "row_index": 39,
+      "raw_score": -0.08990245,
+      "anomaly_score": 0.25644043,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 43.53,
+        "motor_temperature_c": 44.94,
+        "vibration_mm_s": 1.217
+      }
+    },
+    {
+      "row_index": 40,
+      "raw_score": -0.07592093,
+      "anomaly_score": 0.32284776,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 51.91,
+        "motor_temperature_c": 46.18,
+        "vibration_mm_s": 0.532
+      }
+    },
+    {
+      "row_index": 41,
+      "raw_score": -0.00566136,
+      "anomaly_score": 0.65655622,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 40.88,
+        "motor_temperature_c": 44.4,
+        "vibration_mm_s": 0.462
+      }
+    },
+    {
+      "row_index": 42,
+      "raw_score": -0.06399304,
+      "anomaly_score": 0.37950109,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 37.73,
+        "motor_temperature_c": 45.4,
+        "vibration_mm_s": 0.732
+      }
+    },
+    {
+      "row_index": 43,
+      "raw_score": -0.11976287,
+      "anomaly_score": 0.11461385,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 42.54,
+        "motor_temperature_c": 45.52,
+        "vibration_mm_s": 1.202
+      }
+    },
+    {
+      "row_index": 44,
+      "raw_score": -0.12765431,
+      "anomaly_score": 0.07713229,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 45.7,
+        "motor_temperature_c": 46.9,
+        "vibration_mm_s": 0.822
+      }
+    },
+    {
+      "row_index": 45,
+      "raw_score": -0.14148584,
+      "anomaly_score": 0.01143734,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 47.87,
+        "motor_temperature_c": 46.08,
+        "vibration_mm_s": 1.274
+      }
+    },
+    {
+      "row_index": 46,
+      "raw_score": -0.1344799,
+      "anomaly_score": 0.04471313,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 44.91,
+        "motor_temperature_c": 46.64,
+        "vibration_mm_s": 0.713
+      }
+    },
+    {
+      "row_index": 47,
+      "raw_score": -0.08433779,
+      "anomaly_score": 0.28287062,
+      "label": "normal",
+      "is_anomaly": false,
+      "values": {
+        "machine_load_kw": 46.83,
+        "motor_temperature_c": 45.72,
+        "vibration_mm_s": 0.616
+      }
+    }
+  ]
+}

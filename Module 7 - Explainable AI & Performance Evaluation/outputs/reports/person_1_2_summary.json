@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-08-21T03:25:23.479043+00:00",
+  "scope": "Week 7 Person 1 and Person 2",
+  "forecast_model_count": 7,
+  "mean_forecast_wape_percent": 10.40691695,
+  "mean_forecast_smape_percent": 13.94267741,
+  "mean_forecast_r2": 0.47570962,
+  "models_requiring_retraining": 6,
+  "explained_model_count": 7,
+  "anomaly_count": 5,
+  "optimization_improvements": {
+    "improved": 3,
+    "regressed": 0,
+    "unchanged": 4
+  },
+  "person_3_integration_included": false
+}

@@ -1,0 +1,221 @@
+{
+  "generated_at": "2026-08-21T03:25:23.399161+00:00",
+  "models": {
+    "production": {
+      "model": "production_rf",
+      "target": "units_per_hour",
+      "method": "model_native",
+      "feature_count": 4,
+      "features": [
+        {
+          "feature": "machine_load_kw",
+          "importance": 0.92359837,
+          "rank": 1
+        },
+        {
+          "feature": "vibration_mm_s",
+          "importance": 0.04390953,
+          "rank": 2
+        },
+        {
+          "feature": "motor_temperature_c",
+          "importance": 0.0324921,
+          "rank": 3
+        },
+        {
+          "feature": "status",
+          "importance": 0.0,
+          "rank": 4
+        }
+      ]
+    },
+    "boiler": {
+      "model": "boiler_rf",
+      "target": "fuel_flow_m3_hr",
+      "method": "model_native",
+      "feature_count": 4,
+      "features": [
+        {
+          "feature": "flue_gas_temperature_c",
+          "importance": 0.29536664,
+          "rank": 1
+        },
+        {
+          "feature": "efficiency_percent",
+          "importance": 0.27520637,
+          "rank": 2
+        },
+        {
+          "feature": "steam_pressure_bar",
+          "importance": 0.22047738,
+          "rank": 3
+        },
+        {
+          "feature": "feedwater_temperature_c",
+          "importance": 0.20894961,
+          "rank": 4
+        }
+      ]
+    },
+    "compressor": {
+      "model": "compressor_rf",
+      "target": "power_kw",
+      "method": "model_native",
+      "feature_count": 5,
+      "features": [
+        {
+          "feature": "motor_temperature_c",
+          "importance": 0.71846818,
+          "rank": 1
+        },
+        {
+          "feature": "air_pressure_bar",
+          "importance": 0.25263076,
+          "rank": 2
+        },
+        {
+          "feature": "vibration_mm_s",
+          "importance": 0.01476555,
+          "rank": 3
+        },
+        {
+          "feature": "efficiency_percent",
+          "importance": 0.01404843,
+          "rank": 4
+        },
+        {
+          "feature": "status",
+          "importance": 8.707e-05,
+          "rank": 5
+        }
+      ]
+    },
+    "hvac": {
+      "model": "hvac_rf",
+      "target": "power_kw",
+      "method": "model_native",
+      "feature_count": 6,
+      "features": [
+        {
+          "feature": "airflow_m3_min",
+          "importance": 0.76835178,
+          "rank": 1
+        },
+        {
+          "feature": "humidity_percent",
+          "importance": 0.09801223,
+          "rank": 2
+        },
+        {
+          "feature": "temperature_c",
+          "importance": 0.06625059,
+          "rank": 3
+        },
+        {
+          "feature": "efficiency_percent",
+          "importance": 0.04239792,
+          "rank": 4
+        },
+        {
+          "feature": "setpoint_temperature_c",
+          "importance": 0.02462152,
+          "rank": 5
+        },
+        {
+          "feature": "status",
+          "importance": 0.00036597,
+          "rank": 6
+        }
+      ]
+    },
+    "battery": {
+      "model": "battery_rf",
+      "target": "battery_power_kw",
+      "method": "model_native",
+      "feature_count": 5,
+      "features": [
+        {
+          "feature": "current_a",
+          "importance": 0.74297276,
+          "rank": 1
+        },
+        {
+          "feature": "mode",
+          "importance": 0.25446588,
+          "rank": 2
+        },
+        {
+          "feature": "temperature_c",
+          "importance": 0.0012267,
+          "rank": 3
+        },
+        {
+          "feature": "voltage_v",
+          "importance": 0.00074656,
+          "rank": 4
+        },
+        {
+          "feature": "state_of_charge_percent",
+          "importance": 0.0005881,
+          "rank": 5
+        }
+      ]
+    },
+    "grid": {
+      "model": "grid_rf",
+      "target": "grid_import_kw",
+      "method": "model_native",
+      "feature_count": 5,
+      "features": [
+        {
+          "feature": "grid_export_kw",
+          "importance": 0.23528456,
+          "rank": 1
+        },
+        {
+          "feature": "power_factor",
+          "importance": 0.22754891,
+          "rank": 2
+        },
+        {
+          "feature": "frequency_hz",
+          "importance": 0.22347873,
+          "rank": 3
+        },
+        {
+          "feature": "voltage_v",
+          "importance": 0.21927241,
+          "rank": 4
+        },
+        {
+          "feature": "tariff_inr_kwh",
+          "importance": 0.09441539,
+          "rank": 5
+        }
+      ]
+    },
+    "solar": {
+      "model": "solar_rf",
+      "target": "inverter_power_kw",
+      "method": "model_native",
+      "feature_count": 3,
+      "features": [
+        {
+          "feature": "irradiance_w_m2",
+          "importance": 0.61925473,
+          "rank": 1
+        },
+        {
+          "feature": "panel_temperature_c",
+          "importance": 0.38057683,
+          "rank": 2
+        },
+        {
+          "feature": "inverter_status",
+          "importance": 0.00016844,
+          "rank": 3
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,90 @@
+======================================================================
+DATA CLEANING REPORT
+======================================================================
+
+----------------------------------------------------------------------
+Dataset : compressor.csv
+----------------------------------------------------------------------
+Original Rows     : 96
+Duplicate Removed : 0
+Empty Rows Removed: 0
+Final Rows        : 96
+STATUS            : PASSED
+
+----------------------------------------------------------------------
+Dataset : hvac.csv
+----------------------------------------------------------------------
+Original Rows     : 96
+Duplicate Removed : 0
+Empty Rows Removed: 0
+Final Rows        : 96
+STATUS            : PASSED
+
+----------------------------------------------------------------------
+Dataset : battery_storage.csv
+----------------------------------------------------------------------
+Original Rows     : 96
+Duplicate Removed : 0
+Empty Rows Removed: 0
+Final Rows        : 96
+STATUS            : PASSED
+
+----------------------------------------------------------------------
+Dataset : boiler.csv
+----------------------------------------------------------------------
+Original Rows     : 96
+Duplicate Removed : 0
+Empty Rows Removed: 0
+Final Rows        : 96
+STATUS            : PASSED
+
+----------------------------------------------------------------------
+Dataset : grid.csv
+----------------------------------------------------------------------
+Original Rows     : 96
+Duplicate Removed : 0
+Empty Rows Removed: 0
+Final Rows        : 96
+STATUS            : PASSED
+
+----------------------------------------------------------------------
+Dataset : production_line_a_production.csv
+----------------------------------------------------------------------
+Original Rows     : 96
+Duplicate Removed : 0
+Empty Rows Removed: 0
+Final Rows        : 96
+STATUS            : PASSED
+
+----------------------------------------------------------------------
+Dataset : production_line_b_production.csv
+----------------------------------------------------------------------
+Original Rows     : 96
+Duplicate Removed : 0
+Empty Rows Removed: 0
+Final Rows        : 96
+STATUS            : PASSED
+
+----------------------------------------------------------------------
+Dataset : solar_plant.csv
+----------------------------------------------------------------------
+Original Rows     : 96
+Duplicate Removed : 0
+Empty Rows Removed: 0
+Final Rows        : 96
+STATUS            : PASSED
+
+----------------------------------------------------------------------
+Dataset : weather.csv
+----------------------------------------------------------------------
+Original Rows     : 96
+Duplicate Removed : 0
+Empty Rows Removed: 0
+Final Rows        : 96
+STATUS            : PASSED
+
+======================================================================
+SUMMARY
+======================================================================
+Datasets Processed : 9
+Failed             : 0

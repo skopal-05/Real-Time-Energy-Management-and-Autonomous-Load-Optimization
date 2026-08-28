@@ -1,0 +1,6 @@
+{
+    "status": "not_executed",
+    "reason": "No valid anomaly-detection feature dataset is provided by the current Modules 3–6 integration artifacts.",
+    "method": "isolation_forest",
+    "executed": false
+}

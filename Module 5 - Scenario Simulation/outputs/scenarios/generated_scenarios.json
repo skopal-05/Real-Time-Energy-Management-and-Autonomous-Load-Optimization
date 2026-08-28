@@ -1,0 +1,345 @@
+{
+    "generated_at": "2026-08-18T13:49:14.542232+00:00",
+    "scenario_count": 5,
+    "scenarios": [
+        {
+            "scenario_id": "cost_saver",
+            "name": "Cost Saver",
+            "description": "Combines agent targets with flexible electrical load reduction.",
+            "horizon_hours": 1.0,
+            "operating_point": {
+                "production_load_kw": 0.0,
+                "compressor_power_kw": 43.953,
+                "hvac_power_kw": 6.681,
+                "renewable_generation_kw": 260.88,
+                "battery_charge_kw": 40.0,
+                "battery_discharge_kw": 0.0,
+                "grid_export_limit_kw": 100.0,
+                "boiler_fuel_m3_hr": 122.58
+            },
+            "applied_recommendations": [
+                "battery_management_agent",
+                "boiler_agent",
+                "compressor_agent",
+                "hvac_agent"
+            ],
+            "assumptions": [
+                "Production forecast is represented as units/hour and is not converted into electrical kW.",
+                "Electrical demand includes compressor and HVAC power currently forecast by Module 3.",
+                "Solar/inverter generation is treated as renewable generation; battery dispatch is simulated separately.",
+                "Renewable energy is dispatched before battery and grid energy.",
+                "Forecast production output is 74.07 units/hour."
+            ],
+            "metrics": {
+                "energy": {
+                    "useful_electrical_load_kwh": 50.634,
+                    "site_consumption_kwh": 90.634,
+                    "renewable_generation_kwh": 260.88,
+                    "renewable_used_kwh": 190.634,
+                    "renewable_share_percent": 100.0,
+                    "battery_charge_kwh": 40.0,
+                    "battery_discharge_kwh": 0.0,
+                    "grid_import_kwh": 0.0,
+                    "grid_export_kwh": 100.0,
+                    "curtailed_energy_kwh": 70.246,
+                    "boiler_fuel_m3": 122.58,
+                    "energy_saving_kwh": 18.066
+                },
+                "cost": {
+                    "grid_import_cost_inr": 0.0,
+                    "fuel_cost_inr": 5883.84,
+                    "battery_degradation_cost_inr": 60.0,
+                    "export_revenue_inr": 400.0,
+                    "gross_operating_cost_inr": 5943.84,
+                    "net_operating_cost_inr": 5543.84,
+                    "cost_saving_inr": 978.24
+                },
+                "carbon": {
+                    "grid_emissions_kg_co2e": 0.0,
+                    "fuel_emissions_kg_co2e": 245.16,
+                    "total_emissions_kg_co2e": 245.16,
+                    "emissions_avoided_kg_co2e": 43.26
+                }
+            },
+            "ranking": {
+                "score": 100.0,
+                "rank": 1,
+                "component_scores": {
+                    "energy": 100.0,
+                    "cost": 100.0,
+                    "carbon": 100.0
+                }
+            }
+        },
+        {
+            "scenario_id": "renewable_first",
+            "name": "Renewable Priority",
+            "description": "Prioritizes local renewable use, battery charging, and export.",
+            "horizon_hours": 1.0,
+            "operating_point": {
+                "production_load_kw": 0.0,
+                "compressor_power_kw": 50.159,
+                "hvac_power_kw": 7.624,
+                "renewable_generation_kw": 260.88,
+                "battery_charge_kw": 40.0,
+                "battery_discharge_kw": 0.0,
+                "grid_export_limit_kw": 100.0,
+                "boiler_fuel_m3_hr": 122.58
+            },
+            "applied_recommendations": [
+                "battery_management_agent",
+                "boiler_agent",
+                "compressor_agent",
+                "hvac_agent"
+            ],
+            "assumptions": [
+                "Production forecast is represented as units/hour and is not converted into electrical kW.",
+                "Electrical demand includes compressor and HVAC power currently forecast by Module 3.",
+                "Solar/inverter generation is treated as renewable generation; battery dispatch is simulated separately.",
+                "Renewable energy is dispatched before battery and grid energy.",
+                "Forecast production output is 74.07 units/hour."
+            ],
+            "metrics": {
+                "energy": {
+                    "useful_electrical_load_kwh": 57.783,
+                    "site_consumption_kwh": 97.783,
+                    "renewable_generation_kwh": 260.88,
+                    "renewable_used_kwh": 197.783,
+                    "renewable_share_percent": 100.0,
+                    "battery_charge_kwh": 40.0,
+                    "battery_discharge_kwh": 0.0,
+                    "grid_import_kwh": 0.0,
+                    "grid_export_kwh": 100.0,
+                    "curtailed_energy_kwh": 63.097,
+                    "boiler_fuel_m3": 122.58,
+                    "energy_saving_kwh": 10.917
+                },
+                "cost": {
+                    "grid_import_cost_inr": 0.0,
+                    "fuel_cost_inr": 5883.84,
+                    "battery_degradation_cost_inr": 60.0,
+                    "export_revenue_inr": 400.0,
+                    "gross_operating_cost_inr": 5943.84,
+                    "net_operating_cost_inr": 5543.84,
+                    "cost_saving_inr": 978.24
+                },
+                "carbon": {
+                    "grid_emissions_kg_co2e": 0.0,
+                    "fuel_emissions_kg_co2e": 245.16,
+                    "total_emissions_kg_co2e": 245.16,
+                    "emissions_avoided_kg_co2e": 43.26
+                }
+            },
+            "ranking": {
+                "score": 86.15,
+                "rank": 2,
+                "component_scores": {
+                    "energy": 60.43,
+                    "cost": 100.0,
+                    "carbon": 100.0
+                }
+            }
+        },
+        {
+            "scenario_id": "agent_optimized",
+            "name": "Agent Optimized",
+            "description": "Applies feasible Module 4 equipment and dispatch setpoints.",
+            "horizon_hours": 1.0,
+            "operating_point": {
+                "production_load_kw": 0.0,
+                "compressor_power_kw": 51.71,
+                "hvac_power_kw": 7.86,
+                "renewable_generation_kw": 260.88,
+                "battery_charge_kw": 40.0,
+                "battery_discharge_kw": 0.0,
+                "grid_export_limit_kw": 100.0,
+                "boiler_fuel_m3_hr": 122.58
+            },
+            "applied_recommendations": [
+                "battery_management_agent",
+                "boiler_agent",
+                "compressor_agent",
+                "hvac_agent"
+            ],
+            "assumptions": [
+                "Production forecast is represented as units/hour and is not converted into electrical kW.",
+                "Electrical demand includes compressor and HVAC power currently forecast by Module 3.",
+                "Solar/inverter generation is treated as renewable generation; battery dispatch is simulated separately.",
+                "Renewable energy is dispatched before battery and grid energy.",
+                "Forecast production output is 74.07 units/hour."
+            ],
+            "metrics": {
+                "energy": {
+                    "useful_electrical_load_kwh": 59.57,
+                    "site_consumption_kwh": 99.57,
+                    "renewable_generation_kwh": 260.88,
+                    "renewable_used_kwh": 199.57,
+                    "renewable_share_percent": 100.0,
+                    "battery_charge_kwh": 40.0,
+                    "battery_discharge_kwh": 0.0,
+                    "grid_import_kwh": 0.0,
+                    "grid_export_kwh": 100.0,
+                    "curtailed_energy_kwh": 61.31,
+                    "boiler_fuel_m3": 122.58,
+                    "energy_saving_kwh": 9.13
+                },
+                "cost": {
+                    "grid_import_cost_inr": 0.0,
+                    "fuel_cost_inr": 5883.84,
+                    "battery_degradation_cost_inr": 60.0,
+                    "export_revenue_inr": 400.0,
+                    "gross_operating_cost_inr": 5943.84,
+                    "net_operating_cost_inr": 5543.84,
+                    "cost_saving_inr": 978.24
+                },
+                "carbon": {
+                    "grid_emissions_kg_co2e": 0.0,
+                    "fuel_emissions_kg_co2e": 245.16,
+                    "total_emissions_kg_co2e": 245.16,
+                    "emissions_avoided_kg_co2e": 43.26
+                }
+            },
+            "ranking": {
+                "score": 82.69,
+                "rank": 3,
+                "component_scores": {
+                    "energy": 50.54,
+                    "cost": 100.0,
+                    "carbon": 100.0
+                }
+            }
+        },
+        {
+            "scenario_id": "resilience",
+            "name": "Renewable Shortfall Resilience",
+            "description": "Tests reduced renewable availability while preserving a battery reserve.",
+            "horizon_hours": 1.0,
+            "operating_point": {
+                "production_load_kw": 0.0,
+                "compressor_power_kw": 46.539,
+                "hvac_power_kw": 7.074,
+                "renewable_generation_kw": 130.44,
+                "battery_charge_kw": 0.0,
+                "battery_discharge_kw": 0.0,
+                "grid_export_limit_kw": 0.0,
+                "boiler_fuel_m3_hr": 122.58
+            },
+            "applied_recommendations": [
+                "boiler_agent",
+                "compressor_agent",
+                "hvac_agent"
+            ],
+            "assumptions": [
+                "Production forecast is represented as units/hour and is not converted into electrical kW.",
+                "Electrical demand includes compressor and HVAC power currently forecast by Module 3.",
+                "Solar/inverter generation is treated as renewable generation; battery dispatch is simulated separately.",
+                "Renewable energy is dispatched before battery and grid energy.",
+                "Forecast production output is 74.07 units/hour."
+            ],
+            "metrics": {
+                "energy": {
+                    "useful_electrical_load_kwh": 53.613,
+                    "site_consumption_kwh": 53.613,
+                    "renewable_generation_kwh": 130.44,
+                    "renewable_used_kwh": 53.613,
+                    "renewable_share_percent": 100.0,
+                    "battery_charge_kwh": 0.0,
+                    "battery_discharge_kwh": 0.0,
+                    "grid_import_kwh": 0.0,
+                    "grid_export_kwh": 0.0,
+                    "curtailed_energy_kwh": 76.827,
+                    "boiler_fuel_m3": 122.58,
+                    "energy_saving_kwh": 15.087
+                },
+                "cost": {
+                    "grid_import_cost_inr": 0.0,
+                    "fuel_cost_inr": 5883.84,
+                    "battery_degradation_cost_inr": 0.0,
+                    "export_revenue_inr": 0.0,
+                    "gross_operating_cost_inr": 5883.84,
+                    "net_operating_cost_inr": 5883.84,
+                    "cost_saving_inr": 638.24
+                },
+                "carbon": {
+                    "grid_emissions_kg_co2e": 0.0,
+                    "fuel_emissions_kg_co2e": 245.16,
+                    "total_emissions_kg_co2e": 245.16,
+                    "emissions_avoided_kg_co2e": 43.26
+                }
+            },
+            "ranking": {
+                "score": 82.06,
+                "rank": 4,
+                "component_scores": {
+                    "energy": 83.51,
+                    "cost": 65.24,
+                    "carbon": 100.0
+                }
+            }
+        },
+        {
+            "scenario_id": "baseline",
+            "name": "Forecast Baseline",
+            "description": "Forecast operating point with no optimization actions.",
+            "horizon_hours": 1.0,
+            "operating_point": {
+                "production_load_kw": 0.0,
+                "compressor_power_kw": 60.84,
+                "hvac_power_kw": 7.86,
+                "renewable_generation_kw": 260.88,
+                "battery_charge_kw": 0.0,
+                "battery_discharge_kw": 0.0,
+                "grid_export_limit_kw": 100.0,
+                "boiler_fuel_m3_hr": 144.21
+            },
+            "applied_recommendations": [],
+            "assumptions": [
+                "Production forecast is represented as units/hour and is not converted into electrical kW.",
+                "Electrical demand includes compressor and HVAC power currently forecast by Module 3.",
+                "Solar/inverter generation is treated as renewable generation; battery dispatch is simulated separately.",
+                "Renewable energy is dispatched before battery and grid energy.",
+                "Forecast production output is 74.07 units/hour."
+            ],
+            "metrics": {
+                "energy": {
+                    "useful_electrical_load_kwh": 68.7,
+                    "site_consumption_kwh": 68.7,
+                    "renewable_generation_kwh": 260.88,
+                    "renewable_used_kwh": 168.7,
+                    "renewable_share_percent": 100.0,
+                    "battery_charge_kwh": 0.0,
+                    "battery_discharge_kwh": 0.0,
+                    "grid_import_kwh": 0.0,
+                    "grid_export_kwh": 100.0,
+                    "curtailed_energy_kwh": 92.18,
+                    "boiler_fuel_m3": 144.21,
+                    "energy_saving_kwh": 0.0
+                },
+                "cost": {
+                    "grid_import_cost_inr": 0.0,
+                    "fuel_cost_inr": 6922.08,
+                    "battery_degradation_cost_inr": 0.0,
+                    "export_revenue_inr": 400.0,
+                    "gross_operating_cost_inr": 6922.08,
+                    "net_operating_cost_inr": 6522.08,
+                    "cost_saving_inr": 0.0
+                },
+                "carbon": {
+                    "grid_emissions_kg_co2e": 0.0,
+                    "fuel_emissions_kg_co2e": 288.42,
+                    "total_emissions_kg_co2e": 288.42,
+                    "emissions_avoided_kg_co2e": 0.0
+                }
+            },
+            "ranking": {
+                "score": 0.0,
+                "rank": 5,
+                "component_scores": {
+                    "energy": 0.0,
+                    "cost": 0.0,
+                    "carbon": 0.0
+                }
+            }
+        }
+    ]
+}

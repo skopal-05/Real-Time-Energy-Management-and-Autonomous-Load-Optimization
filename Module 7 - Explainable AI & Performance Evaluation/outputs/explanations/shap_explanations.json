@@ -1,0 +1,551 @@
+{
+  "generated_at": "2026-08-21T03:25:23.399162+00:00",
+  "models": {
+    "production": {
+      "model": "production_rf",
+      "target": "units_per_hour",
+      "shap_method": "exact_single_reference_shapley",
+      "global_feature_importance": [
+        {
+          "feature": "machine_load_kw",
+          "importance": 0.92359837,
+          "rank": 1
+        },
+        {
+          "feature": "vibration_mm_s",
+          "importance": 0.04390953,
+          "rank": 2
+        },
+        {
+          "feature": "motor_temperature_c",
+          "importance": 0.0324921,
+          "rank": 3
+        }
+      ],
+      "local_explanations": [
+        {
+          "sample_index": 0,
+          "prediction": 84.1121,
+          "base_value": 61.97235,
+          "top_factors": [
+            {
+              "feature": "machine_load_kw",
+              "feature_value": 101.29,
+              "shap_value": 27.40334167,
+              "effect": "increases"
+            },
+            {
+              "feature": "motor_temperature_c",
+              "feature_value": 49.95,
+              "shap_value": -2.72243333,
+              "effect": "decreases"
+            },
+            {
+              "feature": "vibration_mm_s",
+              "feature_value": 1.202,
+              "shap_value": -2.54115833,
+              "effect": "decreases"
+            }
+          ],
+          "summary": "machine_load_kw increases the prediction by 27.403; motor_temperature_c decreases the prediction by 2.722; vibration_mm_s decreases the prediction by 2.541",
+          "additivity_verified": true
+        },
+        {
+          "sample_index": 1,
+          "prediction": 80.74225,
+          "base_value": 61.97235,
+          "top_factors": [
+            {
+              "feature": "machine_load_kw",
+              "feature_value": 96.28,
+              "shap_value": 19.546425,
+              "effect": "increases"
+            },
+            {
+              "feature": "motor_temperature_c",
+              "feature_value": 49.5,
+              "shap_value": -1.391725,
+              "effect": "decreases"
+            },
+            {
+              "feature": "vibration_mm_s",
+              "feature_value": 1.949,
+              "shap_value": 0.6152,
+              "effect": "increases"
+            }
+          ],
+          "summary": "machine_load_kw increases the prediction by 19.546; motor_temperature_c decreases the prediction by 1.392; vibration_mm_s increases the prediction by 0.615",
+          "additivity_verified": true
+        }
+      ]
+    },
+    "boiler": {
+      "model": "boiler_rf",
+      "target": "fuel_flow_m3_hr",
+      "shap_method": "exact_single_reference_shapley",
+      "global_feature_importance": [
+        {
+          "feature": "flue_gas_temperature_c",
+          "importance": 0.29536664,
+          "rank": 1
+        },
+        {
+          "feature": "efficiency_percent",
+          "importance": 0.27520637,
+          "rank": 2
+        },
+        {
+          "feature": "steam_pressure_bar",
+          "importance": 0.22047738,
+          "rank": 3
+        }
+      ],
+      "local_explanations": [
+        {
+          "sample_index": 0,
+          "prediction": 141.6566,
+          "base_value": 141.2061,
+          "top_factors": [
+            {
+              "feature": "flue_gas_temperature_c",
+              "feature_value": 180.38,
+              "shap_value": 0.71604583,
+              "effect": "increases"
+            },
+            {
+              "feature": "efficiency_percent",
+              "feature_value": 84.58,
+              "shap_value": -0.3081625,
+              "effect": "decreases"
+            },
+            {
+              "feature": "feedwater_temperature_c",
+              "feature_value": 90.34,
+              "shap_value": 0.0469375,
+              "effect": "increases"
+            }
+          ],
+          "summary": "flue_gas_temperature_c increases the prediction by 0.716; efficiency_percent decreases the prediction by 0.308; feedwater_temperature_c increases the prediction by 0.047",
+          "additivity_verified": true
+        },
+        {
+          "sample_index": 1,
+          "prediction": 144.3079,
+          "base_value": 141.2061,
+          "top_factors": [
+            {
+              "feature": "steam_pressure_bar",
+              "feature_value": 9.4,
+              "shap_value": 2.6178,
+              "effect": "increases"
+            },
+            {
+              "feature": "feedwater_temperature_c",
+              "feature_value": 83.34,
+              "shap_value": 0.23438333,
+              "effect": "increases"
+            },
+            {
+              "feature": "flue_gas_temperature_c",
+              "feature_value": 177.24,
+              "shap_value": 0.19826667,
+              "effect": "increases"
+            }
+          ],
+          "summary": "steam_pressure_bar increases the prediction by 2.618; feedwater_temperature_c increases the prediction by 0.234; flue_gas_temperature_c increases the prediction by 0.198",
+          "additivity_verified": true
+        }
+      ]
+    },
+    "compressor": {
+      "model": "compressor_rf",
+      "target": "power_kw",
+      "shap_method": "exact_single_reference_shapley",
+      "global_feature_importance": [
+        {
+          "feature": "motor_temperature_c",
+          "importance": 0.71846818,
+          "rank": 1
+        },
+        {
+          "feature": "air_pressure_bar",
+          "importance": 0.25263076,
+          "rank": 2
+        },
+        {
+          "feature": "vibration_mm_s",
+          "importance": 0.01476555,
+          "rank": 3
+        }
+      ],
+      "local_explanations": [
+        {
+          "sample_index": 0,
+          "prediction": 26.95525,
+          "base_value": 33.2705,
+          "top_factors": [
+            {
+              "feature": "air_pressure_bar",
+              "feature_value": 4.17,
+              "shap_value": -4.19426667,
+              "effect": "decreases"
+            },
+            {
+              "feature": "motor_temperature_c",
+              "feature_value": 45.85,
+              "shap_value": -2.44653333,
+              "effect": "decreases"
+            },
+            {
+              "feature": "efficiency_percent",
+              "feature_value": 93.13,
+              "shap_value": 0.18415,
+              "effect": "increases"
+            }
+          ],
+          "summary": "air_pressure_bar decreases the prediction by 4.194; motor_temperature_c decreases the prediction by 2.447; efficiency_percent increases the prediction by 0.184",
+          "additivity_verified": true
+        },
+        {
+          "sample_index": 1,
+          "prediction": 27.0828,
+          "base_value": 33.2705,
+          "top_factors": [
+            {
+              "feature": "air_pressure_bar",
+              "feature_value": 4.17,
+              "shap_value": -4.70515,
+              "effect": "decreases"
+            },
+            {
+              "feature": "motor_temperature_c",
+              "feature_value": 46.13,
+              "shap_value": -2.18656667,
+              "effect": "decreases"
+            },
+            {
+              "feature": "vibration_mm_s",
+              "feature_value": 0.585,
+              "shap_value": 0.50883333,
+              "effect": "increases"
+            }
+          ],
+          "summary": "air_pressure_bar decreases the prediction by 4.705; motor_temperature_c decreases the prediction by 2.187; vibration_mm_s increases the prediction by 0.509",
+          "additivity_verified": true
+        }
+      ]
+    },
+    "hvac": {
+      "model": "hvac_rf",
+      "target": "power_kw",
+      "shap_method": "exact_single_reference_shapley",
+      "global_feature_importance": [
+        {
+          "feature": "airflow_m3_min",
+          "importance": 0.76835178,
+          "rank": 1
+        },
+        {
+          "feature": "humidity_percent",
+          "importance": 0.09801223,
+          "rank": 2
+        },
+        {
+          "feature": "temperature_c",
+          "importance": 0.06625059,
+          "rank": 3
+        }
+      ],
+      "local_explanations": [
+        {
+          "sample_index": 0,
+          "prediction": 7.16595,
+          "base_value": 12.30425,
+          "top_factors": [
+            {
+              "feature": "airflow_m3_min",
+              "feature_value": 406.42,
+              "shap_value": -5.00490833,
+              "effect": "decreases"
+            },
+            {
+              "feature": "setpoint_temperature_c",
+              "feature_value": 22.0,
+              "shap_value": -0.3334625,
+              "effect": "decreases"
+            },
+            {
+              "feature": "efficiency_percent",
+              "feature_value": 86.79,
+              "shap_value": 0.25156667,
+              "effect": "increases"
+            }
+          ],
+          "summary": "airflow_m3_min decreases the prediction by 5.005; setpoint_temperature_c decreases the prediction by 0.333; efficiency_percent increases the prediction by 0.252",
+          "additivity_verified": true
+        },
+        {
+          "sample_index": 1,
+          "prediction": 7.0657,
+          "base_value": 12.30425,
+          "top_factors": [
+            {
+              "feature": "airflow_m3_min",
+              "feature_value": 548.32,
+              "shap_value": -7.33476917,
+              "effect": "decreases"
+            },
+            {
+              "feature": "humidity_percent",
+              "feature_value": 42.17,
+              "shap_value": 1.29499333,
+              "effect": "increases"
+            },
+            {
+              "feature": "temperature_c",
+              "feature_value": 20.73,
+              "shap_value": 0.62836,
+              "effect": "increases"
+            }
+          ],
+          "summary": "airflow_m3_min decreases the prediction by 7.335; humidity_percent increases the prediction by 1.295; temperature_c increases the prediction by 0.628",
+          "additivity_verified": true
+        }
+      ]
+    },
+    "battery": {
+      "model": "battery_rf",
+      "target": "battery_power_kw",
+      "shap_method": "exact_single_reference_shapley",
+      "global_feature_importance": [
+        {
+          "feature": "current_a",
+          "importance": 0.74297276,
+          "rank": 1
+        },
+        {
+          "feature": "mode",
+          "importance": 0.25446588,
+          "rank": 2
+        },
+        {
+          "feature": "temperature_c",
+          "importance": 0.0012267,
+          "rank": 3
+        }
+      ],
+      "local_explanations": [
+        {
+          "sample_index": 0,
+          "prediction": 78.6832,
+          "base_value": -7.0006,
+          "top_factors": [
+            {
+              "feature": "current_a",
+              "feature_value": 111.07,
+              "shap_value": 67.13080833,
+              "effect": "increases"
+            },
+            {
+              "feature": "mode",
+              "feature_value": 0.0,
+              "shap_value": 18.679125,
+              "effect": "increases"
+            },
+            {
+              "feature": "state_of_charge_percent",
+              "feature_value": 71.06,
+              "shap_value": -0.1285,
+              "effect": "decreases"
+            }
+          ],
+          "summary": "current_a increases the prediction by 67.131; mode increases the prediction by 18.679; state_of_charge_percent decreases the prediction by 0.129",
+          "additivity_verified": true
+        },
+        {
+          "sample_index": 1,
+          "prediction": 73.10645,
+          "base_value": -7.0006,
+          "top_factors": [
+            {
+              "feature": "current_a",
+              "feature_value": 109.73,
+              "shap_value": 62.80534167,
+              "effect": "increases"
+            },
+            {
+              "feature": "mode",
+              "feature_value": 0.0,
+              "shap_value": 18.02766667,
+              "effect": "increases"
+            },
+            {
+              "feature": "temperature_c",
+              "feature_value": 32.05,
+              "shap_value": -0.39015,
+              "effect": "decreases"
+            }
+          ],
+          "summary": "current_a increases the prediction by 62.805; mode increases the prediction by 18.028; temperature_c decreases the prediction by 0.390",
+          "additivity_verified": true
+        }
+      ]
+    },
+    "grid": {
+      "model": "grid_rf",
+      "target": "grid_import_kw",
+      "shap_method": "exact_single_reference_shapley",
+      "global_feature_importance": [
+        {
+          "feature": "grid_export_kw",
+          "importance": 0.23528456,
+          "rank": 1
+        },
+        {
+          "feature": "power_factor",
+          "importance": 0.22754891,
+          "rank": 2
+        },
+        {
+          "feature": "frequency_hz",
+          "importance": 0.22347873,
+          "rank": 3
+        }
+      ],
+      "local_explanations": [
+        {
+          "sample_index": 0,
+          "prediction": 412.7234,
+          "base_value": 374.6811,
+          "top_factors": [
+            {
+              "feature": "grid_export_kw",
+              "feature_value": 8.02,
+              "shap_value": 41.69665667,
+              "effect": "increases"
+            },
+            {
+              "feature": "frequency_hz",
+              "feature_value": 49.889,
+              "shap_value": -10.62823917,
+              "effect": "decreases"
+            },
+            {
+              "feature": "tariff_inr_kwh",
+              "feature_value": 6.5,
+              "shap_value": 4.41192333,
+              "effect": "increases"
+            }
+          ],
+          "summary": "grid_export_kw increases the prediction by 41.697; frequency_hz decreases the prediction by 10.628; tariff_inr_kwh increases the prediction by 4.412",
+          "additivity_verified": true
+        },
+        {
+          "sample_index": 1,
+          "prediction": 402.90445,
+          "base_value": 374.6811,
+          "top_factors": [
+            {
+              "feature": "power_factor",
+              "feature_value": 0.967,
+              "shap_value": 13.08300833,
+              "effect": "increases"
+            },
+            {
+              "feature": "voltage_v",
+              "feature_value": 419.25,
+              "shap_value": 11.79028333,
+              "effect": "increases"
+            },
+            {
+              "feature": "tariff_inr_kwh",
+              "feature_value": 6.5,
+              "shap_value": 10.836975,
+              "effect": "increases"
+            }
+          ],
+          "summary": "power_factor increases the prediction by 13.083; voltage_v increases the prediction by 11.790; tariff_inr_kwh increases the prediction by 10.837",
+          "additivity_verified": true
+        }
+      ]
+    },
+    "solar": {
+      "model": "solar_rf",
+      "target": "inverter_power_kw",
+      "shap_method": "exact_single_reference_shapley",
+      "global_feature_importance": [
+        {
+          "feature": "irradiance_w_m2",
+          "importance": 0.61925473,
+          "rank": 1
+        },
+        {
+          "feature": "panel_temperature_c",
+          "importance": 0.38057683,
+          "rank": 2
+        },
+        {
+          "feature": "inverter_status",
+          "importance": 0.00016844,
+          "rank": 3
+        }
+      ],
+      "local_explanations": [
+        {
+          "sample_index": 0,
+          "prediction": 99.92895,
+          "base_value": 183.2902,
+          "top_factors": [
+            {
+              "feature": "irradiance_w_m2",
+              "feature_value": 218.52,
+              "shap_value": -57.641075,
+              "effect": "decreases"
+            },
+            {
+              "feature": "panel_temperature_c",
+              "feature_value": 34.26,
+              "shap_value": -25.720175,
+              "effect": "decreases"
+            },
+            {
+              "feature": "inverter_status",
+              "feature_value": 0.0,
+              "shap_value": -0.0,
+              "effect": "decreases"
+            }
+          ],
+          "summary": "irradiance_w_m2 decreases the prediction by 57.641; panel_temperature_c decreases the prediction by 25.720; inverter_status decreases the prediction by 0.000",
+          "additivity_verified": true
+        },
+        {
+          "sample_index": 1,
+          "prediction": 131.1029,
+          "base_value": 183.2902,
+          "top_factors": [
+            {
+              "feature": "irradiance_w_m2",
+              "feature_value": 289.9,
+              "shap_value": -30.25825,
+              "effect": "decreases"
+            },
+            {
+              "feature": "panel_temperature_c",
+              "feature_value": 36.12,
+              "shap_value": -21.92905,
+              "effect": "decreases"
+            },
+            {
+              "feature": "inverter_status",
+              "feature_value": 0.0,
+              "shap_value": 0.0,
+              "effect": "increases"
+            }
+          ],
+          "summary": "irradiance_w_m2 decreases the prediction by 30.258; panel_temperature_c decreases the prediction by 21.929; inverter_status increases the prediction by 0.000",
+          "additivity_verified": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+    "generated_at": "2026-08-16T00:00:11.210141",
+    "base_state": {
+        "units_per_hour": 74.07,
+        "fuel_flow_m3_hr": 144.21,
+        "compressor_power_kw": 60.84,
+        "hvac_power_kw": 7.86,
+        "battery_power_kw": 24.93,
+        "grid_import_kw": 387.73,
+        "inverter_power_kw": 260.88,
+        "renewable_generation_kw": 285.81,
+        "total_load_kw": 68.7,
+        "production_load_kw": 68.7,
+        "production_demand_kw": 68.7,
+        "tariff_inr_kwh": 8.0,
+        "off_peak_tariff_inr_kwh": 6.0,
+        "grid_tariff_inr_kwh": 8.0,
+        "flexible_load_fraction": 0.2,
+        "available_power_kw": 68.7,
+        "plant_demand_kw": 68.7,
+        "renewable_available_kw": 285.81,
+        "solar_available_kw": 260.88,
+        "solar_generation_kw": 260.88,
+        "site_demand_kw": 68.7,
+        "battery_charge_headroom_kw": 40.0,
+        "battery_charge_limit_kw": 50.0,
+        "grid_export_limit_kw": 100.0,
+        "state_of_charge_percent": 50.0,
+        "capacity_kwh": 100.0,
+        "battery_discharge_available_kw": 24.93,
+        "battery_reserve_kw": 20.0,
+        "maximum_charge_kw": 50.0,
+        "maximum_discharge_kw": 50.0,
+        "battery_cost_inr_kwh": 5.0,
+        "interval_hours": 1.0,
+        "renewable_surplus_kw": 217.11,
+        "site_deficit_kw": 0.0,
+        "net_demand_kw": -242.04000000000002,
+        "grid_import_limit_kw": 500.0,
+        "export_price_inr_kwh": 4.0,
+        "temperature_c": 24.0,
+        "target_temperature_c": 24.0,
+        "minimum_temperature_c": 20.0,
+        "maximum_temperature_c": 28.0,
+        "maximum_hvac_power_kw": 100.0,
+        "pressure_bar": 7.0,
+        "target_pressure_bar": 6.0,
+        "minimum_pressure_bar": 5.0,
+        "maximum_compressor_power_kw": 100.0,
+        "efficiency_percent": 85.0,
+        "required_efficiency_percent": 70.0,
+        "maximum_fuel_flow_m3_hr": 200.0,
+        "equipment": "plant_equipment",
+        "health_score": 100.0,
+        "anomaly_score": 0.0,
+        "maintenance_due": false,
+        "unserved_load_kw": 0.0
+    },
+    "recommended_setpoints": {
+        "boiler_agent": {
+            "boiler_fuel_target_m3_hr": 122.58,
+            "boiler_fuel_reduction_m3_hr": 21.63,
+            "required_efficiency_percent": 70.0
+        },
+        "rule_engine": {
+            "renewable_surplus_kw": 217.11
+        },
+        "solar_dispatch_agent": {
+            "solar_to_load_kw": 68.7,
+            "solar_to_battery_kw": 40.0,
+            "solar_to_grid_kw": 100.0,
+            "solar_curtailed_kw": 52.18
+        },
+        "battery_management_agent": {
+            "battery_charge_kw": 40.0,
+            "battery_discharge_kw": 0.0,
+            "battery_power_kw": -40.0,
+            "projected_soc_percent": 90.0
+        },
+        "compressor_agent": {
+            "compressor_power_target_kw": 51.71,
+            "compressor_load_reduction_kw": 9.13,
+            "target_pressure_bar": 6.0
+        },
+        "cost_optimization_agent": {
+            "production_load_target_kw": 68.7,
+            "load_to_shift_kw": 0.0
+        },
+        "load_balancing_agent": {
+            "line_power_targets_kw": {
+                "production_line_A": 34.35,
+                "production_line_B": 34.35
+            },
+            "total_power_target_kw": 68.7
+        },
+        "production_scheduler": {
+            "assignments": [
+                {
+                    "job_id": "forecast_production_job",
+                    "slot_id": "current_forecast_slot",
+                    "energy_kwh": 68.7,
+                    "renewable_kwh": 68.7,
+                    "grid_kwh": 0.0,
+                    "estimated_cost_inr": 0.0
+                }
+            ],
+            "unscheduled_jobs": []
+        },
+        "energy_allocator": {
+            "renewable_to_production_kw": 68.7,
+            "battery_to_production_kw": 0.0,
+            "grid_to_production_kw": 0.0,
+            "renewable_surplus_kw": 217.11,
+            "unserved_production_kw": 0.0
+        },
+        "renewable_agent": {
+            "solar_to_load_kw": 68.7,
+            "battery_to_load_kw": 0.0,
+            "grid_to_load_kw": 0.0,
+            "solar_surplus_kw": 192.18
+        },
+        "grid_interaction_agent": {
+            "grid_import_kw": 0.0,
+            "grid_export_kw": 100.0,
+            "unserved_load_kw": 0.0,
+            "curtailed_export_kw": 142.04
+        },
+        "hvac_agent": {
+            "hvac_power_target_kw": 7.86,
+            "hvac_load_reduction_kw": 0.0,
+            "target_temperature_c": 24.0
+        },
+        "equipment_health_agent": {
+            "health_score": 100.0,
+            "anomaly_score": 0.0
+        }
+    },
+    "recommendation_count": 14
+}
