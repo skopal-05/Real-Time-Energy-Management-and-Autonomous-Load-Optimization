@@ -186,6 +186,7 @@ class Optimizer:
                 "evaluations": ga_result.evaluations,
                 "seed": self.algorithm.seed,
                 "best_fitness": objective["total"],
+                "history": list(ga_result.history),
             },
         )
         self.validator.require_valid(self.validator.validate_result(result, problem), "optimization result")
