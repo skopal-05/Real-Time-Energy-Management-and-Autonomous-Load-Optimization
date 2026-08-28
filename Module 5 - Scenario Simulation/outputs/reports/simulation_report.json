@@ -1,11 +1,11 @@
 {
-    "generated_at": "2026-08-18T13:49:14.542232+00:00",
+    "generated_at": "2026-08-28T10:14:05.860056+00:00",
     "module": "Module 5 - Generative Scenario Simulation",
     "horizon_hours": 1.0,
     "input_summary": {
-        "forecast_path": "E:\\Final year Project\\DigitalTwin-AI\\Module 3 - Forecasting\\outputs\\forecast_output.json",
-        "recommendations_path": "E:\\Final year Project\\DigitalTwin-AI\\Module 4 - Multi-Agent Intelligence\\outputs\\recommendations\\recommendations.json",
-        "recommendation_count": 14
+        "forecast_path": "/Users/uditmittal/Downloads/Real-Time-Energy-Management-and-Autonomous-Load-Optimization-main/enertwin_data/runs/20260828T101354Z/module5_adapted_forecast.json",
+        "recommendations_path": "/Users/uditmittal/Downloads/Real-Time-Energy-Management-and-Autonomous-Load-Optimization-main/Module 4 - Multi-Agent Intelligence/outputs/recommendations/recommendations.json",
+        "recommendation_count": 13
     },
     "ranking_weights": {
         "energy": 0.35,
@@ -15,11 +15,11 @@
     "scenario_count": 5,
     "best_scenario_id": "cost_saver",
     "best_scenario_name": "Cost Saver",
-    "best_score": 100.0,
+    "best_score": 91.11,
     "baseline_comparison": {
-        "energy_saving_kwh": 18.066,
-        "cost_saving_inr": 978.24,
-        "emissions_avoided_kg_co2e": 43.26
+        "energy_saving_kwh": 3.562,
+        "cost_saving_inr": 1035.54,
+        "emissions_avoided_kg_co2e": 44.51
     },
     "status": "completed"
 }

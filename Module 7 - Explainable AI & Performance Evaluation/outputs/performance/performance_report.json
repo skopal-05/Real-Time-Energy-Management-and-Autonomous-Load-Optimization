@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T03:25:23.398958+00:00",
+  "generated_at": "2026-08-28T10:14:13.086469+00:00",
   "forecasting_models": {
     "production": {
       "model": "production_rf",
@@ -121,16 +121,16 @@
     "mean_r2": 0.47570962
   },
   "decision_pipeline": {
-    "recommendation_count": 14,
-    "high_or_critical_priority_count": 2,
+    "recommendation_count": 13,
+    "high_or_critical_priority_count": 4,
     "setpoint_coverage_percent": 100.0,
     "constraint_coverage_percent": 100.0
   },
   "scenario_evaluation": {
     "scenario_count": 5,
     "best_scenario_id": "cost_saver",
-    "best_score": 100.0,
-    "score_spread": 100.0,
+    "best_score": 91.11,
+    "score_spread": 91.11,
     "all_scenarios_ranked": true
   },
   "optimization_benchmark": {
@@ -143,19 +143,19 @@
     "comparisons": [
       {
         "metric": "carbon.total_emissions_kg_co2e",
-        "baseline": 245.16,
-        "candidate": 245.16,
-        "absolute_change": 0.0,
-        "relative_change_percent": 0.0,
+        "baseline": 268.3132,
+        "candidate": 247.9072,
+        "absolute_change": -20.406,
+        "relative_change_percent": -7.6053,
         "direction": "lower_is_better",
-        "status": "unchanged"
+        "status": "improved"
       },
       {
         "metric": "cost.net_operating_cost_inr",
-        "baseline": 5573.4,
-        "candidate": 5532.754603,
-        "absolute_change": -40.645397,
-        "relative_change_percent": -0.7293,
+        "baseline": 6047.36,
+        "candidate": 5862.11,
+        "absolute_change": -185.25,
+        "relative_change_percent": -3.0633,
         "direction": "lower_is_better",
         "status": "improved"
       },
@@ -170,61 +170,41 @@
       },
       {
         "metric": "energy.energy_objective_kwh",
-        "baseline": 1421.489,
-        "candidate": 1421.489265,
-        "absolute_change": 0.000265,
-        "relative_change_percent": 0.0,
-        "direction": "lower_is_better",
-        "status": "unchanged"
-      },
-      {
-        "metric": "energy.grid_export_kwh",
-        "baseline": 92.61,
-        "candidate": 100.0,
-        "absolute_change": 7.39,
-        "relative_change_percent": 7.9797,
-        "direction": "higher_is_better",
-        "status": "improved"
-      },
-      {
-        "metric": "energy.grid_import_kwh",
-        "baseline": 0.0,
-        "candidate": 0.0,
+        "baseline": 1301.5585,
+        "candidate": 1301.5585,
         "absolute_change": 0.0,
         "relative_change_percent": 0.0,
         "direction": "lower_is_better",
         "status": "unchanged"
       },
       {
-        "metric": "energy.site_consumption_kwh",
-        "baseline": 168.27,
-        "candidate": 160.88,
-        "absolute_change": -7.39,
-        "relative_change_percent": -4.3918,
+        "metric": "energy.grid_export_kwh",
+        "baseline": 0.0,
+        "candidate": 0.0,
+        "absolute_change": 0.0,
+        "relative_change_percent": 0.0,
+        "direction": "higher_is_better",
+        "status": "unchanged"
+      },
+      {
+        "metric": "energy.grid_import_kwh",
+        "baseline": 42.7,
+        "candidate": 14.2,
+        "absolute_change": -28.5,
+        "relative_change_percent": -66.7447,
         "direction": "lower_is_better",
         "status": "improved"
+      },
+      {
+        "metric": "energy.site_consumption_kwh",
+        "baseline": 47.48,
+        "candidate": 47.48,
+        "absolute_change": 0.0,
+        "relative_change_percent": 0.0,
+        "direction": "lower_is_better",
+        "status": "unchanged"
       }
     ]
   },
-  "model_compatibility_warnings": [
-    "battery_encoder: Trying to unpickle estimator LabelEncoder from version 1.9.0 when using version 1.7.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
-    "battery_rf: Trying to unpickle estimator DecisionTreeRegressor from version 1.9.0 when using version 1.7.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
-    "battery_rf: Trying to unpickle estimator RandomForestRegressor from version 1.9.0 when using version 1.7.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
-    "boiler_rf: Trying to unpickle estimator DecisionTreeRegressor from version 1.9.0 when using version 1.7.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
-    "boiler_rf: Trying to unpickle estimator RandomForestRegressor from version 1.9.0 when using version 1.7.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
-    "compressor_encoder: Trying to unpickle estimator LabelEncoder from version 1.9.0 when using version 1.7.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
-    "compressor_rf: Trying to unpickle estimator DecisionTreeRegressor from version 1.9.0 when using version 1.7.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
-    "compressor_rf: Trying to unpickle estimator RandomForestRegressor from version 1.9.0 when using version 1.7.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
-    "grid_rf: Trying to unpickle estimator DecisionTreeRegressor from version 1.9.0 when using version 1.7.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
-    "grid_rf: Trying to unpickle estimator RandomForestRegressor from version 1.9.0 when using version 1.7.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
-    "hvac_encoder: Trying to unpickle estimator LabelEncoder from version 1.9.0 when using version 1.7.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
-    "hvac_rf: Trying to unpickle estimator DecisionTreeRegressor from version 1.9.0 when using version 1.7.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
-    "hvac_rf: Trying to unpickle estimator RandomForestRegressor from version 1.9.0 when using version 1.7.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
-    "production_encoder: Trying to unpickle estimator LabelEncoder from version 1.9.0 when using version 1.7.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
-    "production_rf: Trying to unpickle estimator DecisionTreeRegressor from version 1.9.0 when using version 1.7.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
-    "production_rf: Trying to unpickle estimator RandomForestRegressor from version 1.9.0 when using version 1.7.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
-    "solar_encoder: Trying to unpickle estimator LabelEncoder from version 1.9.0 when using version 1.7.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
-    "solar_rf: Trying to unpickle estimator DecisionTreeRegressor from version 1.9.0 when using version 1.7.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
-    "solar_rf: Trying to unpickle estimator RandomForestRegressor from version 1.9.0 when using version 1.7.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations"
-  ]
+  "model_compatibility_warnings": []
 }

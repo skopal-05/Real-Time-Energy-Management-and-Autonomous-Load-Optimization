@@ -1,0 +1,58 @@
+# Full system: integration API (with the seven modules inside it) and the
+# Next.js control centre.
+#
+#   docker compose -f deploy/docker-compose.yml up --build
+#
+# Then open http://localhost:3000. The API answers on http://localhost:8000/api.
+
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.api
+    image: enertwin-api:1.0.0
+    ports:
+      - "8000:8000"
+    environment:
+      # Origin the browser serves the UI from, for CORS.
+      ENERTWIN_CORS_ORIGINS: http://localhost:3000
+      # Intervals of Module 1 data the twins advance through per run.
+      # 96 is one full day of the cleaned dataset.
+      ENERTWIN_TWIN_SYNC_STEPS: "96"
+      # Re-run the whole pipeline on this interval, in seconds. 0 disables it,
+      # in which case runs happen at start-up and on POST /api/pipeline/run.
+      ENERTWIN_PIPELINE_INTERVAL: "0"
+      # Leave at 0. Regenerating Module 1's synthetic dataset rewrites the
+      # version-controlled data every other module reads.
+      ENERTWIN_REGENERATE_DATA: "0"
+    volumes:
+      # Pipeline run history, kept across restarts. The modules' own outputs
+      # live inside the image and are rewritten on every run.
+      - enertwin-data:/app/enertwin_data
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8000/api/health"]
+      interval: 30s
+      timeout: 5s
+      start_period: 90s
+      retries: 3
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.frontend
+      args:
+        # Resolved by the browser, not by the container, so it is the host's
+        # published port rather than the compose service name.
+        NEXT_PUBLIC_API_BASE_URL: http://localhost:8000/api
+        NEXT_PUBLIC_API_MODE: live
+    image: enertwin-frontend:1.0.0
+    ports:
+      - "3000:3000"
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  enertwin-data:

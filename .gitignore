@@ -28,3 +28,6 @@ Thumbs.db
 
 # Logs
 *.log
+# Integration layer
+enertwin_data/
+frontend/.env.local

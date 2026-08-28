@@ -1,0 +1,21 @@
+# Keep the build context small. The seven module folders are copied in
+# deliberately by deploy/Dockerfile.api and must not be excluded here.
+
+.git
+.venv
+venv
+env
+enertwin_data
+
+**/__pycache__
+**/*.py[cod]
+.pytest_cache
+.mypy_cache
+
+frontend/node_modules
+frontend/.next
+frontend/.env.local
+
+.DS_Store
+**/.DS_Store
+*.log

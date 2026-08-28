@@ -1,0 +1,49 @@
+# Next.js control centre.
+#
+# NEXT_PUBLIC_* values are inlined at build time, so the API URL is a build
+# argument rather than a runtime environment variable.
+
+FROM node:22-alpine AS deps
+WORKDIR /app
+COPY frontend/package.json frontend/package-lock.json ./
+RUN npm ci
+
+FROM node:22-alpine AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY frontend/ ./
+
+ARG NEXT_PUBLIC_API_BASE_URL=http://localhost:8000/api
+ARG NEXT_PUBLIC_API_MODE=live
+ARG NEXT_PUBLIC_POLL_INTERVAL_MS=10000
+ARG NEXT_PUBLIC_REQUIRE_AUTH=false
+
+ENV NEXT_PUBLIC_API_BASE_URL=$NEXT_PUBLIC_API_BASE_URL \
+    NEXT_PUBLIC_API_MODE=$NEXT_PUBLIC_API_MODE \
+    NEXT_PUBLIC_POLL_INTERVAL_MS=$NEXT_PUBLIC_POLL_INTERVAL_MS \
+    NEXT_PUBLIC_REQUIRE_AUTH=$NEXT_PUBLIC_REQUIRE_AUTH \
+    NEXT_TELEMETRY_DISABLED=1
+
+RUN npm run build
+
+FROM node:22-alpine AS runner
+WORKDIR /app
+ENV NODE_ENV=production NEXT_TELEMETRY_DISABLED=1
+
+RUN addgroup -g 10001 nodejs && adduser -u 10001 -G nodejs -S nextjs
+
+# No public/ directory: this frontend ships no static assets, so every icon
+# and font is either inline SVG or loaded from CSS. Add a COPY for it here if
+# one is ever introduced.
+#
+# --chown is required, not cosmetic: COPY preserves the source file's mode, and
+# a source checked out with restrictive permissions (package.json is mode 0600
+# in this repository) is then unreadable by the unprivileged runtime user.
+COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
+COPY --from=builder --chown=nextjs:nodejs /app/node_modules ./node_modules
+COPY --from=builder --chown=nextjs:nodejs /app/package.json ./package.json
+
+USER nextjs
+EXPOSE 3000
+
+CMD ["npm", "run", "start", "--", "--port", "3000", "--hostname", "0.0.0.0"]

@@ -1,17 +1,19 @@
 {
     "future_state": {
-        "units_per_hour": 74.07,
-        "fuel_flow_m3_hr": 144.21,
-        "compressor_power_kw": 60.84,
-        "hvac_power_kw": 7.86,
-        "battery_power_kw": 24.93,
-        "grid_import_kw": 387.73,
-        "inverter_power_kw": 260.88
+        "units_per_hour": 70.91,
+        "production_line_a_units_per_hour": 33.73,
+        "production_line_b_units_per_hour": 37.18,
+        "fuel_flow_m3_hr": 139.85,
+        "compressor_power_kw": 17.71,
+        "hvac_power_kw": 6.03,
+        "battery_power_kw": -52.62,
+        "grid_import_kw": 323.34,
+        "inverter_power_kw": 4.78
     },
     "energy_forecast": {
-        "total_load_kw": 68.7,
-        "renewable_generation_kw": 285.81,
-        "grid_import_kw": 387.73,
-        "boiler_fuel_flow_m3_hr": 144.21
+        "total_load_kw": 23.74,
+        "renewable_generation_kw": -47.84,
+        "grid_import_kw": 323.34,
+        "boiler_fuel_flow_m3_hr": 139.85
     }
 }

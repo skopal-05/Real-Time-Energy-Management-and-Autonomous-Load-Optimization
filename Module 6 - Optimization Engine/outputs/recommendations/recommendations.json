@@ -1,21 +1,38 @@
 {
-  "generated_at": "2026-08-20T13:08:58.506224+00:00",
-  "recommendation_count": 1,
+  "generated_at": "2026-08-28T10:14:05.941278+00:00",
+  "recommendation_count": 2,
   "recommendations": [
     {
-      "recommendation_id": "optimize_battery_charge_kw",
+      "recommendation_id": "optimize_battery_discharge_kw",
       "equipment": "battery",
-      "action": "decrease_battery_charge_kw",
-      "priority": "medium",
-      "reason": "Adjust battery charging to improve renewable utilization and operating cost.",
-      "current_value": 40.0,
-      "recommended_value": 32.61,
-      "change_percent": 18.48,
+      "action": "increase_battery_discharge_kw",
+      "priority": "high",
+      "reason": "Adjust battery discharge while preserving the configured SOC reserve.",
+      "current_value": 0.0,
+      "recommended_value": 28.5,
+      "change_percent": 2850000000000.0,
       "unit": "kW",
       "expected_impact": {
         "energy_saving_kwh": 0.0,
-        "cost_saving_inr": 40.645,
-        "emissions_avoided_kg_co2e": 0.0
+        "cost_saving_inr": 185.25,
+        "emissions_avoided_kg_co2e": 20.406
+      },
+      "constraints_respected": true
+    },
+    {
+      "recommendation_id": "optimize_grid_export_limit_kw",
+      "equipment": "grid",
+      "action": "decrease_grid_export_limit_kw",
+      "priority": "medium",
+      "reason": "Use available export capacity before renewable energy is curtailed.",
+      "current_value": 100.0,
+      "recommended_value": 92.673,
+      "change_percent": 7.33,
+      "unit": "kW",
+      "expected_impact": {
+        "energy_saving_kwh": 0.0,
+        "cost_saving_inr": 185.25,
+        "emissions_avoided_kg_co2e": 20.406
       },
       "constraints_respected": true
     }

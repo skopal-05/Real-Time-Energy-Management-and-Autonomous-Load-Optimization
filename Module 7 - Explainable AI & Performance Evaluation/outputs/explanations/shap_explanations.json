@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T03:25:23.399162+00:00",
+  "generated_at": "2026-08-28T10:14:13.086563+00:00",
   "models": {
     "production": {
       "model": "production_rf",
@@ -511,11 +511,11 @@
             {
               "feature": "inverter_status",
               "feature_value": 0.0,
-              "shap_value": -0.0,
-              "effect": "decreases"
+              "shap_value": 0.0,
+              "effect": "neutral"
             }
           ],
-          "summary": "irradiance_w_m2 decreases the prediction by 57.641; panel_temperature_c decreases the prediction by 25.720; inverter_status decreases the prediction by 0.000",
+          "summary": "irradiance_w_m2 decreases the prediction by 57.641; panel_temperature_c decreases the prediction by 25.720; inverter_status neutral the prediction by 0.000",
           "additivity_verified": true
         },
         {
@@ -539,10 +539,10 @@
               "feature": "inverter_status",
               "feature_value": 0.0,
               "shap_value": 0.0,
-              "effect": "increases"
+              "effect": "neutral"
             }
           ],
-          "summary": "irradiance_w_m2 decreases the prediction by 30.258; panel_temperature_c decreases the prediction by 21.929; inverter_status increases the prediction by 0.000",
+          "summary": "irradiance_w_m2 decreases the prediction by 30.258; panel_temperature_c decreases the prediction by 21.929; inverter_status neutral the prediction by 0.000",
           "additivity_verified": true
         }
       ]

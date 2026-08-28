@@ -1,0 +1,57 @@
+# Integration API plus the seven modules.
+#
+# The modules are copied in verbatim and executed from their own folders,
+# exactly as they run locally. Nothing in this image rewrites them.
+
+FROM python:3.12-slim AS base
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_NO_CACHE_DIR=1
+
+WORKDIR /app
+
+# Build tooling for the scientific stack's wheels on architectures without one.
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends build-essential curl \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt ./
+RUN pip install --upgrade pip && pip install -r requirements.txt
+
+# The modules. Folder names carry spaces and are part of the contract - the
+# integration layer resolves every path by these exact names.
+COPY ["Module 1 - Data Acquisition", "/app/Module 1 - Data Acquisition"]
+COPY ["Module 2 - Digital Twin", "/app/Module 2 - Digital Twin"]
+COPY ["Module 3 - Forecasting", "/app/Module 3 - Forecasting"]
+COPY ["Module 4 - Multi-Agent Intelligence", "/app/Module 4 - Multi-Agent Intelligence"]
+COPY ["Module 5 - Scenario Simulation", "/app/Module 5 - Scenario Simulation"]
+COPY ["Module 6 - Optimization Engine", "/app/Module 6 - Optimization Engine"]
+COPY ["Module 7 - Explainable AI & Performance Evaluation", "/app/Module 7 - Explainable AI & Performance Evaluation"]
+
+COPY enertwin /app/enertwin
+COPY tests /app/tests
+
+# The modules write their artifacts into their own outputs/ folders, so those
+# must be writable by the runtime user.
+#
+# enertwin_data/ is created here, before the ownership change, on purpose: a
+# named volume mounted over a path that does not exist in the image is
+# initialised root-owned, and the unprivileged runtime user then cannot write
+# its run history. Creating it first means Docker seeds the volume with these
+# permissions instead.
+RUN useradd --create-home --uid 10001 enertwin \
+    && mkdir -p /app/enertwin_data/runs \
+    && chown -R enertwin:enertwin /app
+USER enertwin
+
+ENV ENERTWIN_DATA_DIR=/app/enertwin_data \
+    ENERTWIN_CORS_ORIGINS=http://localhost:3000
+
+EXPOSE 8000
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=90s --retries=3 \
+    CMD curl -fsS http://127.0.0.1:8000/api/health || exit 1
+
+CMD ["python", "-m", "uvicorn", "enertwin.api.app:app", \
+     "--host", "0.0.0.0", "--port", "8000"]

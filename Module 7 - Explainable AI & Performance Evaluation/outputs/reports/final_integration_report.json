@@ -1,14 +1,14 @@
 {
-    "generated_at": "2026-08-21T14:46:25.257553+00:00",
+    "generated_at": "2026-08-28T10:14:13.852981+00:00",
     "module": "Module 7 - Explainable AI & Performance Evaluation",
     "pipeline": "Module 3 → Module 4 → Module 5 → Module 6 → Module 7",
     "performance": {
-        "generated_at": "2026-08-21T14:46:25.257553+00:00",
+        "generated_at": "2026-08-28T10:14:13.852947+00:00",
         "forecasting_models": {
             "production_forecast": {
                 "model": "production_forecast",
                 "target": "production",
-                "prediction": 74.07,
+                "prediction": 70.91,
                 "evaluation_status": "forecast_available_actuals_not_available",
                 "metrics": {
                     "sample_count": 1.0,
@@ -26,7 +26,7 @@
             "boiler_forecast": {
                 "model": "boiler_forecast",
                 "target": "boiler",
-                "prediction": 144.21,
+                "prediction": 139.85,
                 "evaluation_status": "forecast_available_actuals_not_available",
                 "metrics": {
                     "sample_count": 1.0,
@@ -44,7 +44,7 @@
             "compressor_forecast": {
                 "model": "compressor_forecast",
                 "target": "compressor",
-                "prediction": 60.84,
+                "prediction": 17.71,
                 "evaluation_status": "forecast_available_actuals_not_available",
                 "metrics": {
                     "sample_count": 1.0,
@@ -62,7 +62,7 @@
             "hvac_forecast": {
                 "model": "hvac_forecast",
                 "target": "hvac",
-                "prediction": 7.86,
+                "prediction": 6.03,
                 "evaluation_status": "forecast_available_actuals_not_available",
                 "metrics": {
                     "sample_count": 1.0,
@@ -80,7 +80,7 @@
             "battery_forecast": {
                 "model": "battery_forecast",
                 "target": "battery",
-                "prediction": 24.93,
+                "prediction": -52.62,
                 "evaluation_status": "forecast_available_actuals_not_available",
                 "metrics": {
                     "sample_count": 1.0,
@@ -98,7 +98,7 @@
             "grid_forecast": {
                 "model": "grid_forecast",
                 "target": "grid",
-                "prediction": 387.73,
+                "prediction": 323.34,
                 "evaluation_status": "forecast_available_actuals_not_available",
                 "metrics": {
                     "sample_count": 1.0,
@@ -116,7 +116,7 @@
             "solar_forecast": {
                 "model": "solar_forecast",
                 "target": "solar",
-                "prediction": 260.88,
+                "prediction": 4.78,
                 "evaluation_status": "forecast_available_actuals_not_available",
                 "metrics": {
                     "sample_count": 1.0,
@@ -137,21 +137,21 @@
             "evaluation_status": "forecast_outputs_available"
         },
         "decision_pipeline": {
-            "recommendation_count": 14,
-            "high_or_critical_priority_count": 2,
+            "recommendation_count": 13,
+            "high_or_critical_priority_count": 4,
             "setpoint_coverage_percent": 100.0,
             "constraint_coverage_percent": 0.0,
             "scenario_count": 5,
             "best_scenario_id": "cost_saver",
-            "best_scenario_score": 100.0,
+            "best_scenario_score": 91.11,
             "optimization_feasible": true
         },
         "scenario_evaluation": {
             "scenario_count": 5,
             "best_scenario_id": "cost_saver",
-            "best_scenario_score": 100.0,
-            "best_score": 100.0,
-            "score_spread": 100.0,
+            "best_scenario_score": 91.11,
+            "best_score": 91.11,
+            "score_spread": 91.11,
             "all_scenarios_ranked": true
         },
         "optimization_benchmark": {
@@ -164,19 +164,19 @@
             "comparisons": [
                 {
                     "metric": "carbon.total_emissions_kg_co2e",
-                    "baseline": 245.16,
-                    "candidate": 245.16,
-                    "absolute_change": 0.0,
-                    "relative_change_percent": 0.0,
+                    "baseline": 268.3132,
+                    "candidate": 247.9072,
+                    "absolute_change": -20.406,
+                    "relative_change_percent": -7.6053,
                     "direction": "lower_is_better",
-                    "status": "unchanged"
+                    "status": "improved"
                 },
                 {
                     "metric": "cost.net_operating_cost_inr",
-                    "baseline": 5573.4,
-                    "candidate": 5532.754603,
-                    "absolute_change": -40.645397,
-                    "relative_change_percent": -0.7293,
+                    "baseline": 6047.36,
+                    "candidate": 5862.11,
+                    "absolute_change": -185.25,
+                    "relative_change_percent": -3.0633,
                     "direction": "lower_is_better",
                     "status": "improved"
                 },
@@ -191,39 +191,39 @@
                 },
                 {
                     "metric": "energy.energy_objective_kwh",
-                    "baseline": 1421.489,
-                    "candidate": 1421.489265,
-                    "absolute_change": 0.000265,
-                    "relative_change_percent": 0.0,
-                    "direction": "lower_is_better",
-                    "status": "unchanged"
-                },
-                {
-                    "metric": "energy.grid_export_kwh",
-                    "baseline": 92.61,
-                    "candidate": 100.0,
-                    "absolute_change": 7.39,
-                    "relative_change_percent": 7.9797,
-                    "direction": "higher_is_better",
-                    "status": "improved"
-                },
-                {
-                    "metric": "energy.grid_import_kwh",
-                    "baseline": 0.0,
-                    "candidate": 0.0,
+                    "baseline": 1301.5585,
+                    "candidate": 1301.5585,
                     "absolute_change": 0.0,
                     "relative_change_percent": 0.0,
                     "direction": "lower_is_better",
                     "status": "unchanged"
                 },
                 {
-                    "metric": "energy.site_consumption_kwh",
-                    "baseline": 168.27,
-                    "candidate": 160.88,
-                    "absolute_change": -7.39,
-                    "relative_change_percent": -4.3918,
+                    "metric": "energy.grid_export_kwh",
+                    "baseline": 0.0,
+                    "candidate": 0.0,
+                    "absolute_change": 0.0,
+                    "relative_change_percent": 0.0,
+                    "direction": "higher_is_better",
+                    "status": "unchanged"
+                },
+                {
+                    "metric": "energy.grid_import_kwh",
+                    "baseline": 42.7,
+                    "candidate": 14.2,
+                    "absolute_change": -28.5,
+                    "relative_change_percent": -66.7447,
                     "direction": "lower_is_better",
                     "status": "improved"
+                },
+                {
+                    "metric": "energy.site_consumption_kwh",
+                    "baseline": 47.48,
+                    "candidate": 47.48,
+                    "absolute_change": 0.0,
+                    "relative_change_percent": 0.0,
+                    "direction": "lower_is_better",
+                    "status": "unchanged"
                 }
             ]
         }
@@ -251,18 +251,18 @@
         "module_7_contract": "valid"
     },
     "optimized_state": {
-        "production_load_kw": 68.7,
-        "compressor_power_kw": 51.71,
-        "hvac_power_kw": 7.86,
-        "battery_charge_kw": 32.61,
-        "battery_discharge_kw": 0.0,
-        "grid_export_limit_kw": 100.0,
-        "boiler_fuel_m3_hr": 122.58,
-        "renewable_generation_kw": 260.88,
-        "projected_soc_percent": 80.979
+        "production_load_kw": 23.74,
+        "compressor_power_kw": 17.71,
+        "hvac_power_kw": 6.03,
+        "battery_charge_kw": 0.0,
+        "battery_discharge_kw": 28.5,
+        "grid_export_limit_kw": 92.673,
+        "boiler_fuel_m3_hr": 118.87,
+        "renewable_generation_kw": 4.78,
+        "projected_soc_percent": 20.0
     },
     "best_scenario": {
-        "generated_at": "2026-08-18T13:49:14.542232+00:00",
+        "generated_at": "2026-08-28T10:14:05.860056+00:00",
         "best_scenario": {
             "scenario_id": "cost_saver",
             "name": "Cost Saver",
@@ -270,16 +270,15 @@
             "horizon_hours": 1.0,
             "operating_point": {
                 "production_load_kw": 0.0,
-                "compressor_power_kw": 43.953,
-                "hvac_power_kw": 6.681,
-                "renewable_generation_kw": 260.88,
-                "battery_charge_kw": 40.0,
+                "compressor_power_kw": 15.053,
+                "hvac_power_kw": 5.125,
+                "renewable_generation_kw": 4.78,
+                "battery_charge_kw": 0.0,
                 "battery_discharge_kw": 0.0,
                 "grid_export_limit_kw": 100.0,
-                "boiler_fuel_m3_hr": 122.58
+                "boiler_fuel_m3_hr": 118.87
             },
             "applied_recommendations": [
-                "battery_management_agent",
                 "boiler_agent",
                 "compressor_agent",
                 "hvac_agent"
@@ -289,46 +288,46 @@
                 "Electrical demand includes compressor and HVAC power currently forecast by Module 3.",
                 "Solar/inverter generation is treated as renewable generation; battery dispatch is simulated separately.",
                 "Renewable energy is dispatched before battery and grid energy.",
-                "Forecast production output is 74.07 units/hour."
+                "Forecast production output is 70.91 units/hour."
             ],
             "metrics": {
                 "energy": {
-                    "useful_electrical_load_kwh": 50.634,
-                    "site_consumption_kwh": 90.634,
-                    "renewable_generation_kwh": 260.88,
-                    "renewable_used_kwh": 190.634,
-                    "renewable_share_percent": 100.0,
-                    "battery_charge_kwh": 40.0,
+                    "useful_electrical_load_kwh": 20.178,
+                    "site_consumption_kwh": 20.178,
+                    "renewable_generation_kwh": 4.78,
+                    "renewable_used_kwh": 4.78,
+                    "renewable_share_percent": 23.69,
+                    "battery_charge_kwh": 0.0,
                     "battery_discharge_kwh": 0.0,
-                    "grid_import_kwh": 0.0,
-                    "grid_export_kwh": 100.0,
-                    "curtailed_energy_kwh": 70.246,
-                    "boiler_fuel_m3": 122.58,
-                    "energy_saving_kwh": 18.066
+                    "grid_import_kwh": 15.398,
+                    "grid_export_kwh": 0.0,
+                    "curtailed_energy_kwh": 0.0,
+                    "boiler_fuel_m3": 118.87,
+                    "energy_saving_kwh": 3.562
                 },
                 "cost": {
-                    "grid_import_cost_inr": 0.0,
-                    "fuel_cost_inr": 5883.84,
-                    "battery_degradation_cost_inr": 60.0,
-                    "export_revenue_inr": 400.0,
-                    "gross_operating_cost_inr": 5943.84,
-                    "net_operating_cost_inr": 5543.84,
-                    "cost_saving_inr": 978.24
+                    "grid_import_cost_inr": 123.18,
+                    "fuel_cost_inr": 5705.76,
+                    "battery_degradation_cost_inr": 0.0,
+                    "export_revenue_inr": 0.0,
+                    "gross_operating_cost_inr": 5828.94,
+                    "net_operating_cost_inr": 5828.94,
+                    "cost_saving_inr": 1035.54
                 },
                 "carbon": {
-                    "grid_emissions_kg_co2e": 0.0,
-                    "fuel_emissions_kg_co2e": 245.16,
-                    "total_emissions_kg_co2e": 245.16,
-                    "emissions_avoided_kg_co2e": 43.26
+                    "grid_emissions_kg_co2e": 11.025,
+                    "fuel_emissions_kg_co2e": 237.74,
+                    "total_emissions_kg_co2e": 248.765,
+                    "emissions_avoided_kg_co2e": 44.51
                 }
             },
             "ranking": {
-                "score": 100.0,
+                "score": 91.11,
                 "rank": 1,
                 "component_scores": {
                     "energy": 100.0,
-                    "cost": 100.0,
-                    "carbon": 100.0
+                    "cost": 91.62,
+                    "carbon": 80.15
                 }
             }
         }
