@@ -27,7 +27,7 @@ def run_integration_test() -> bool:
 
     print("=" * 68)
     print("Module 6 - Optimization Engine")
-    print("Module 4 + Module 5 → Module 6 Integration Test")
+    print("Module 4 + Module 5 -> Module 6 Integration Test")
     print("=" * 68)
 
     try:

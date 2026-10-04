@@ -1,10 +1,10 @@
 {
-    "generated_at": "2026-08-28T10:14:05.860056+00:00",
+    "generated_at": "2026-10-04T14:38:27.503564+00:00",
     "module": "Module 5 - Generative Scenario Simulation",
     "horizon_hours": 1.0,
     "input_summary": {
-        "forecast_path": "/Users/uditmittal/Downloads/Real-Time-Energy-Management-and-Autonomous-Load-Optimization-main/enertwin_data/runs/20260828T101354Z/module5_adapted_forecast.json",
-        "recommendations_path": "/Users/uditmittal/Downloads/Real-Time-Energy-Management-and-Autonomous-Load-Optimization-main/Module 4 - Multi-Agent Intelligence/outputs/recommendations/recommendations.json",
+        "forecast_path": "E:\\Final year Project\\digitaltwin-2.0\\enertwin_data\\runs\\20261004T143715Z\\module5_adapted_forecast.json",
+        "recommendations_path": "E:\\Final year Project\\digitaltwin-2.0\\Module 4 - Multi-Agent Intelligence\\outputs\\recommendations\\recommendations.json",
         "recommendation_count": 13
     },
     "ranking_weights": {

@@ -11,8 +11,14 @@ system therefore needs no frontend code change - only ``.env.local``:
 Requests are served from the in-memory snapshot of the last completed pipeline
 run. They never block on the modules.
 """
-
 from __future__ import annotations
+
+import sys
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
 
 import logging
 from contextlib import asynccontextmanager

@@ -310,7 +310,7 @@ def main() -> int:
 
     print("=" * 64)
     print("Module 6 - Optimization Engine")
-    print("Module 4/5 → Module 6 Integration")
+    print("Module 4/5 -> Module 6 Integration")
     print("=" * 64)
 
     print(

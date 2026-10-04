@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T10:14:13.172376+00:00",
+  "generated_at": "2026-10-04T14:39:12.359519+00:00",
   "method": "isolation_forest",
   "feature_names": [
     "machine_load_kw",

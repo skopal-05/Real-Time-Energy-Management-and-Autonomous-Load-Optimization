@@ -1,8 +1,8 @@
-"""
-End-to-end integration test for Modules 3–7.
+﻿"""
+End-to-end integration test for Modules 3â€“7.
 
 Pipeline:
-Module 3 → Module 4 → Module 5 → Module 6 → Module 7
+Module 3 â†’ Module 4 â†’ Module 5 â†’ Module 6 â†’ Module 7
 """
 
 from __future__ import annotations
@@ -37,7 +37,7 @@ def run_integration_test() -> bool:
         "MODULE 7 - FINAL END-TO-END INTEGRATION TEST"
     )
     print(
-        "Module 3 → Module 4 → Module 5 → Module 6 → Module 7"
+        "Module 3 â†’ Module 4 â†’ Module 5 â†’ Module 6 â†’ Module 7"
     )
     print("=" * 72)
 
@@ -72,7 +72,7 @@ def run_integration_test() -> bool:
         # ----------------------------------------------------------
 
         print(
-            "\n[2/7] Checking Modules 3–6 outputs..."
+            "\n[2/7] Checking Modules 3â€“6 outputs..."
         )
 
         input_files = {
@@ -196,7 +196,7 @@ def run_integration_test() -> bool:
         # ----------------------------------------------------------
 
         print(
-            "\n[3/7] Loading Modules 3–6 artifacts..."
+            "\n[3/7] Loading Modules 3â€“6 artifacts..."
         )
 
         forecast = controller._require_mapping(
@@ -311,7 +311,7 @@ def run_integration_test() -> bool:
         # ----------------------------------------------------------
 
         print(
-            "\n[4/7] Validating Modules 3–6 contracts..."
+            "\n[4/7] Validating Modules 3â€“6 contracts..."
         )
 
         validation = validator.validate_pipeline(
@@ -489,23 +489,23 @@ def run_integration_test() -> bool:
         )
 
         print(
-            "  Module 3 → Forecasting       : PASS"
+            "  Module 3 â†’ Forecasting       : PASS"
         )
 
         print(
-            "  Module 4 → Multi-Agent       : PASS"
+            "  Module 4 â†’ Multi-Agent       : PASS"
         )
 
         print(
-            "  Module 5 → Scenario          : PASS"
+            "  Module 5 â†’ Scenario          : PASS"
         )
 
         print(
-            "  Module 6 → Optimization      : PASS"
+            "  Module 6 â†’ Optimization      : PASS"
         )
 
         print(
-            "  Module 7 → Evaluation        : PASS"
+            "  Module 7 â†’ Evaluation        : PASS"
         )
 
         print(
@@ -584,7 +584,7 @@ def run_integration_test() -> bool:
 
         print("\n" + "=" * 72)
         print(
-            "✓ MODULE 7 END-TO-END INTEGRATION TEST PASSED"
+            "âœ“ MODULE 7 END-TO-END INTEGRATION TEST PASSED"
         )
         print("=" * 72)
 
@@ -594,7 +594,7 @@ def run_integration_test() -> bool:
 
         print("\n" + "=" * 72)
         print(
-            f"✗ INTEGRATION TEST FAILED: {exc}"
+            f"âœ— INTEGRATION TEST FAILED: {exc}"
         )
         print("=" * 72)
 

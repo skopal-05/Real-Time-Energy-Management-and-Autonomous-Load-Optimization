@@ -1,8 +1,8 @@
-"""
+﻿"""
 Final validation utilities for Module 7 integration.
 
 Validates the complete:
-Module 3 → Module 4 → Module 5 → Module 6 → Module 7
+Module 3 â†’ Module 4 â†’ Module 5 â†’ Module 6 â†’ Module 7
 pipeline.
 """
 

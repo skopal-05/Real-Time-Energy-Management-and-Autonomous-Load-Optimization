@@ -1,12 +1,12 @@
-"""
+﻿"""
 Final Integration Controller for Module 7.
 
 Pipeline:
-Module 3 → Module 4 → Module 5 → Module 6 → Module 7
+Module 3 â†’ Module 4 â†’ Module 5 â†’ Module 6 â†’ Module 7
 
 Responsibilities
 ----------------
-- Load Modules 3–6 artifacts
+- Load Modules 3â€“6 artifacts
 - Validate upstream data
 - Evaluate the decision pipeline
 - Benchmark Module 6 optimization
@@ -158,7 +158,7 @@ for directory in (
 
 class FinalIntegrationController:
     """
-    Controller for the complete Modules 3–7 pipeline.
+    Controller for the complete Modules 3â€“7 pipeline.
     """
 
     # ----------------------------------------------------------
@@ -197,7 +197,7 @@ class FinalIntegrationController:
         )
 
         self.pipeline_name = (
-            "Module 3 → Module 4 → Module 5 → Module 6 → Module 7"
+            "Module 3 â†’ Module 4 â†’ Module 5 â†’ Module 6 â†’ Module 7"
         )
 
     # ==========================================================
@@ -766,7 +766,7 @@ class FinalIntegrationController:
             "status": "not_executed",
             "reason": (
                 "No valid anomaly-detection feature dataset is "
-                "provided by the current Modules 3–6 integration artifacts."
+                "provided by the current Modules 3â€“6 integration artifacts."
             ),
             "method": "isolation_forest",
             "executed": False,
